@@ -6,7 +6,6 @@
 body {
     background-color: rgb(228, 223, 223);
 }
-
 body.dark-mode {
     background-color: #121212;
     color: #fff;
@@ -126,7 +125,7 @@ body.dark-mode nav ul li a:hover {
     background-color: white;
     transform: scale(1.05);
   }
-  
+
   .mobile-menu ul li a, .mobile-menu ul li button {
     color: white;
     font-size: 1.5rem;
@@ -453,19 +452,28 @@ footer {
     margin: 6px 6px 3px 6px;
 }
 
-/*Responsiveness*/
+/*Responsive*/
 @media (max-width: 768px) {
-    nav, section, footer {
-      width: 100%;
-      box-sizing: border-box;
+    /* Header */
+    header{
+      width: 91%;
+      margin: 10px 5px;
     }
-  
+    section{
+      height: auto;
+    }
     /* ---------- Home ---------- */
     .home-left,
     .home-right {
-      margin-bottom: 30px;
+      margin-top: 20px;
+      margin-bottom: 50px;
     }
-  
+    .home h1{
+      padding-top: 20px;
+    }
+    .home-right img{
+      width: auto;
+    }
     /* ---------- About ---------- */
     .about-container {
       flex-direction: column;
@@ -489,13 +497,12 @@ footer {
     nav {
       position: sticky;
       top: 0;
-      left: 0;
       width: 100%;
-      height: 6vh;
+      height: 8vh;
       background: var(--nav-bg, #fff);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       flex-wrap: wrap;
       padding: 10px 20px;
@@ -515,9 +522,8 @@ footer {
     .mobile-menu {
       position: fixed;
       top: 0;
-      left: 0;
       width: 100%;
-      height: 40vh;
+      height: 50vh;
       background: rgba(0, 0, 0, 0.9);
       display: flex;
       flex-direction: column;
@@ -539,6 +545,10 @@ footer {
       opacity: 0;
       transform: translateY(100%);
       pointer-events: none;
+    }
+    .mobile-menu .close-icon{
+      padding: 30px 50px;
+
     }
   
     /* ---------- Footer ---------- */
