@@ -579,8 +579,8 @@ footer {
   }
 
   .skills-box {
-    width: 90%;
-    padding: 20px;
+    width: 50%;
+    padding: 10px;
   }
 
   .section-title {
@@ -600,3 +600,4 @@ footer {
     border-radius: 15px;
   }
 }
+
