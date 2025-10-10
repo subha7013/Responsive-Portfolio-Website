@@ -1,7 +1,7 @@
-/* * {
+* {
     margin: 0;
     padding: 0;
-} */
+}
 html, body {
   max-width: 100%;
   overflow-x: hidden;
@@ -573,8 +573,7 @@ footer {
     padding-top: 20px;
     height: auto;
     text-align: center;
-    /* padding-bottom: 15px; */
-    width: auto;
+    padding-bottom: 15px;
   }
 
   /* ---------- Skills ---------- */
@@ -624,6 +623,7 @@ footer {
     align-items: center;
     margin: 10px 0;
 }
+
 
 
 
