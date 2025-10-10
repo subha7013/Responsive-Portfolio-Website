@@ -573,7 +573,8 @@ footer {
     padding-top: 20px;
     height: auto;
     text-align: center;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
+    width: auto;
   }
 
   /* ---------- Skills ---------- */
@@ -623,4 +624,5 @@ footer {
     align-items: center;
     margin: 10px 0;
 }
+
 
