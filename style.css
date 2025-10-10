@@ -575,11 +575,11 @@ footer {
   .skills-grid {
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
   }
 
   .skills-box {
-    width: 50%;
+    width: auto;
     padding: 10px;
   }
 
@@ -600,4 +600,5 @@ footer {
     border-radius: 15px;
   }
 }
+
 
