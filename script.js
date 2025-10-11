@@ -27,8 +27,7 @@ closeMenu.addEventListener('click', () => {
 });
 // contact
 (function(){
-  // Replace with your public key
-  emailjs.init("3pApLSwcAD6Ba5Z_F");
+  emailjs.init("3pApLSwcAD6Ba5Z_F"); // Your Public Key
 })();
 
 document.getElementById("contactForm").addEventListener("submit", function(e) {
@@ -43,25 +42,20 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   };
 
   const serviceID = "service_9dsieua";
-  const templateID = "template_oxr2dvf";
-  const autoReplyTemplate = "template_31xex6k";
+  const templateID = "template_oxr2dvf";   
+  const autoReplyTemplate = "template_31xex6k"; 
 
-  // Send message to YOU
   emailjs.send(serviceID, templateID, params)
     .then(() => {
       formStatus.textContent = "✅ Message sent successfully!";
       formStatus.style.color = "green";
-      formStatus.style.fontWeight = "bolder";
       document.getElementById("contactForm").reset();
 
-      // Send auto-reply to the user
-      return emailjs.send(serviceID, autoReplyTemplate, {
-        to_email: params.from_email,
-        user_name: params.from_name
+      // ✅ Auto-reply to the user
+      emailjs.send(serviceID, autoReplyTemplate, {
+        user_name: params.from_name,
+        user_email: params.from_email
       });
-    })
-    .then(() => {
-      console.log("Auto-reply sent");
     })
     .catch((err) => {
       console.error(err);
