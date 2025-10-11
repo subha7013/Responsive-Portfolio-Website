@@ -23,7 +23,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#achievements">Achievements</a></li>
-            <li><button>Contact me</button></li>
+            <li><button><a href="#contact-me">Contact me</a></button></li>
             <li><img src="/assets/dark.svg" id="dark-toggle" alt="Dark Mode"></li>
           </ul>
       
@@ -40,7 +40,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#achievements">Achievements</a></li>
-            <li><button>Contact me</button></li>
+            <li><button><a href="#contact-me">Contact me</a></button></li>
             <li><img src="/assets/dark.svg" id="mobileDarkToggle" alt="Dark Mode"></li>
           </ul>
         </div>
@@ -72,7 +72,7 @@
                 </div>
                 <!-- Right side -->
                 <div class="about-right">
-                    <h1>About Me</h1>
+                    <h1 style="font-family:'Times New Roman', Times, serif;">About Me</h1>
                     <h1>Hello, I'm Subhasish Nath</h1>
                     <p>
                         I'm currently a third-year B.Tech student specializing in Information Technology at MCKV
@@ -142,14 +142,23 @@
 
         </section><br>
         <div class="partition"></div><br>
-        <section class="contact">
-
+        <section id="contact-me" class="contact">
+          <h1>Contact Me</h1>
+          <p>If you have anything query or anything should i improve you can send message in the following form.</p><br><br>
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="msg">Send Message</button>
+          </form>
+          <p id="formStatus" style="margin-top: 10px;"></p>
         </section><br>
         <div class="partition"></div><br>
     </main>
     <footer>
         <p>Copyright © Subhasish || All rights reserved || Made with ❤️ & Care in India || 2025</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 
