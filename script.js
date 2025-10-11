@@ -25,3 +25,47 @@ hamburger.addEventListener('click', () => {
 closeMenu.addEventListener('click', () => {
   mobileMenu.classList.remove('active');
 });
+// contact
+(function(){
+  // Replace with your public key
+  emailjs.init("3pApLSwcAD6Ba5Z_F");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formStatus = document.getElementById("formStatus");
+
+  const params = {
+    from_name: document.getElementById("name").value,
+    from_email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_9dsieua";
+  const templateID = "template_oxr2dvf";
+  const autoReplyTemplate = "template_31xex6k";
+
+  // Send message to YOU
+  emailjs.send(serviceID, templateID, params)
+    .then(() => {
+      formStatus.textContent = "✅ Message sent successfully!";
+      formStatus.style.color = "green";
+      formStatus.style.fontWeight = "bolder";
+      document.getElementById("contactForm").reset();
+
+      // Send auto-reply to the user
+      return emailjs.send(serviceID, autoReplyTemplate, {
+        to_email: params.from_email,
+        user_name: params.from_name
+      });
+    })
+    .then(() => {
+      console.log("Auto-reply sent");
+    })
+    .catch((err) => {
+      console.error(err);
+      formStatus.textContent = "❌ Failed to send message. Please try again.";
+      formStatus.style.color = "red";
+    });
+});
