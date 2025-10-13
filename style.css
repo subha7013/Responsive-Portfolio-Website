@@ -17,6 +17,9 @@ html, body {
   right: 30px;
   display: none;
 }
+body.dark-mode #topBtn{
+  filter: invert(1);
+}
 .partition{
   padding: 3px;
   background-color: rgba(151, 146, 146, 0.731);
@@ -741,3 +744,4 @@ footer {
     width: 100%;
   }
 }
+
