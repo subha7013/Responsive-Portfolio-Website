@@ -1,3 +1,8 @@
+const btn = document.getElementById("topBtn");
+window.onscroll = () =>{
+  btn.style.display = window.scrollY > 200 ? "block" : "none";
+}
+btn.onclick = () => scrollTo({top: 0,behavior: "smooth"});
 // Dark Mode Toggle
 const darkToggle = document.getElementById('dark-toggle');
 const mobileDarkToggle = document.getElementById('mobileDarkToggle');
@@ -63,3 +68,4 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
       formStatus.style.color = "red";
     });
 });
+
