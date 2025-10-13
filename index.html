@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio-Subhasish Nath</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
 </head>
 
 <body>
+    <img src="/assets/top.svg" id="topBtn" alt="">
     <header>
         <nav>
           <div class="nav-logo">
@@ -58,7 +62,7 @@
 
                 <!-- Right side -->
                 <div class="home-right">
-                    <img src="assets\profile.jpg" alt="Subhasish Profile Picture">
+                    <img src="/assets/profile.jpg" alt="Subhasish Profile Picture">
                 </div>
             </div>
         </section><br>
@@ -85,7 +89,7 @@
                         contribute to impactful projects while enhancing my skills in full-stack development with Responsive Websites and
                         problem-solving.
                     </p><br>
-                    <a href="resume.pdf" download class="btn">Download Resume</a><br><br>
+                    <a href="/resume.pdf" download class="btn">Download Resume</a><br><br>
                     <div class="social-icons">
                         <a href="https://www.linkedin.com/in/subhasish-nath-a39193365/" target="_blank">
                             <img src="/assets/linkedin.svg" alt="LinkedIn" srcset="">
@@ -135,7 +139,24 @@
           </section><br>
         <div class="partition"></div><br>
         <section class="projects">
+          <!-- Projects (put inside <section id="projects">) -->
+            <div class="projects-wrapper">
+              <!-- Swiper container -->
+              <div class="swiper projects-swiper">
+                <div class="swiper-wrapper" id="projectsWrapper">
+                  <!-- slides will be injected here by JS -->
+                </div>
 
+                <!-- navigation -->
+                    <div class="swiper-button-prev prev"><img src="/assets/prv.svg" alt="">
+                  </div>
+                  <div class="swiper-button-next next"><img src="/assets/nxt.svg" alt=""></div>
+                
+
+                <!-- pagination -->
+                <div class="swiper-pagination projects-pagination"></div>
+              </div>
+            </div>
         </section><br>
         <div class="partition"></div><br>
         <section class="perks">
@@ -146,9 +167,9 @@
           <h1>Contact Me</h1>
           <p>If you have anything query or anything should i improve you can send message in the following form.</p><br><br>
           <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required />
-            <input type="email" id="email" placeholder="Your Email" required />
-            <textarea id="message" placeholder="Your Message" required></textarea>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
             <button type="submit" class="msg">Send Message</button>
           </form>
           <p id="formStatus" style="margin-top: 10px;"></p>
@@ -159,6 +180,9 @@
         <p>Copyright © Subhasish || All rights reserved || Made with ❤️ & Care in India || 2025</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
