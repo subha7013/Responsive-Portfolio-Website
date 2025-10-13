@@ -11,6 +11,12 @@ html, body {
   overflow-x: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+#topBtn{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+}
 .partition{
   padding: 3px;
   background-color: rgba(151, 146, 146, 0.731);
@@ -222,7 +228,7 @@ nav button:hover {
 
 
 /* -------------------------------------------
-   5) SECTIONS (HOME, ABOUT, SKILLS,CONTACT)
+   5) SECTIONS (HOME, ABOUT, SKILLS, PROJECTS, CONTACT)
 ------------------------------------------- */
 section {
   border-radius: 17px;
@@ -443,6 +449,167 @@ body.dark-mode .skills-box ul li {
   transform: scale(1.2);
 }
 
+/* Projects section styles */
+.projects-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.projects-swiper {
+  padding-bottom: 60px;
+  position: relative;
+}
+
+
+/* Slide card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  background: #faf9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 18px;
+  min-height: 420px;
+  align-items: stretch;
+}
+
+/* image */
+.project-card .thumb {
+  width: 100%;
+  height: 20vh;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f2f2f2;
+}
+
+/* content */
+.project-card h3 {
+  margin: 8px 0 6px;
+  font-size: 1.15rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #444;
+  flex: 1;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* tech badges */
+.tech-list {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tech-badge {
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.06);
+}
+
+/* links */
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.project-links a {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.project-links a.live {
+  background: #007bff;
+  color: white;
+}
+.project-links a.code {
+  background: transparent;
+  color: #333;
+  border: 2px solid #ddd;
+}
+
+/* Swiper navigation overrides (optional look) */
+/* Hide Swiper's built-in arrow icons */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+
+/* Optional: remove default button background/shape */
+.swiper-button-next,.swiper-button-prev {
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+
+}
+body.dark-mode .swiper-button-next,body.dark-mode .swiper-button-prev{
+  filter: invert(1);
+}
+
+.swiper-button-prev img,.swiper-button-next img{
+  margin-bottom: 50px;
+}
+
+.swiper-pagination-bullet {
+  background: #8d8989;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #191616;
+}
+body.dark-mode .project-card{
+  background-color: #3e3434f5;
+}
+body.dark-mode .project-card p{
+  color: white;
+}
+.project-card .live:hover{
+  color: blue;
+  background-color: rgb(245, 238, 238);
+  border: 2px solid rgb(241, 223, 223);
+}
+.project-card .code:hover{
+  color: white;
+  background-color: #1f1f1f;
+}
+body.dark-mode .tech-badge{
+  background-color: #0b0401;
+  color: rgb(184, 162, 162);
+  font-weight: bolder;
+  border: 2px solid;
+}
+body.dark-mode .live{
+  background-color: rgb(252, 7, 7) ;
+}
+body.dark-mode .live:hover{
+  background-color: white;
+  color: rgb(240, 6, 6);
+  font-weight: bolder;
+}
+body.dark-mode .code{
+  background-color: rgb(4, 4, 4);
+  color: white;
+}
+
+body.dark-mode .code:hover{
+  background-color: blue;
+}
+body.dark-mode .swiper-pagination-bullet{
+  background-color: red;
+}
+
+/* contact section */
 .contact {
   padding: 60px 20px;
   background: #f6f6f6;
@@ -560,7 +727,12 @@ footer {
   .home, .about, .skills {
     padding-top: 20px;
   }
-
+  .project-card {
+    min-height: 420px;
+  }
+  .project-card .thumb { 
+    height: 220px;
+  }
   .contact {
     padding: 40px 20px;
   }
