@@ -33,7 +33,7 @@ closeMenu.addEventListener('click', () => {
 
 async function loadProjectsAndInitSwiper() {
   try {
-    const resp = await fetch('projects.json', { cache: "no-store" });
+    const resp = await fetch('./projects.json', { cache: "no-store" });
     if (!resp.ok) throw new Error('Failed to load projects.json');
     const projects = await resp.json();
 
@@ -135,6 +135,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
       formStatus.style.color = "red";
     });
 });
+
 
 
 
