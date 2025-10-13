@@ -13,7 +13,7 @@ html, body {
 }
 #topBtn{
   position: fixed;
-  bottom: 30px;
+  bottom: 50px;
   right: 30px;
   display: none;
 }
@@ -744,5 +744,6 @@ footer {
     width: 100%;
   }
 }
+
 
 
