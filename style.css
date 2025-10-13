@@ -561,7 +561,7 @@ body.dark-mode .swiper-button-next,body.dark-mode .swiper-button-prev{
 }
 
 .swiper-button-prev img,.swiper-button-next img{
-  margin-bottom: 50px;
+  margin-bottom: 85px;
 }
 
 .swiper-pagination-bullet {
@@ -744,6 +744,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
