@@ -13,8 +13,8 @@ html, body {
 }
 #topBtn{
   position: fixed;
-  bottom: 50px;
-  right: 30px;
+  bottom: 65px;
+  right: 50px;
   display: none;
 }
 body.dark-mode #topBtn{
@@ -744,6 +744,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
