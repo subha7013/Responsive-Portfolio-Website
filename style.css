@@ -70,6 +70,9 @@ body.dark-mode .btn:hover{
   background-color: white;
   font-weight: bolder;
 }
+body.dark-mode section h1{
+   color: white;
+}
 /* -------------------------------------------
    3) NAVIGATION BAR (DESKTOP & MOBILE)
 ------------------------------------------- */
@@ -253,7 +256,9 @@ section.contact{
   align-items: center;
   flex-wrap: wrap;
 }
-
+.about h1{
+   text-align: center;
+}
 .home-left, .about-right {
   flex: 1;
   min-width: 280px;
@@ -746,6 +751,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
