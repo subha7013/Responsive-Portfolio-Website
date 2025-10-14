@@ -100,10 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // contact
 (function(){
-  emailjs.init("3pApLSwcAD6Ba5Z_F"); // Your Public Key
+  emailjs.init("3pApLSwcAD6Ba5Z_F"); // ✅ Your Public Key
 })();
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const formStatus = document.getElementById("formStatus");
@@ -114,32 +114,39 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     message: document.getElementById("message").value,
   };
 
-  const serviceID = "service_9dsieua";
-  const templateID = "template_oxr2dvf";   
-  const autoReplyTemplate = "template_31xex6k"; 
+  const serviceID = "service_9dsieua";          // ✅ Replace if different
+  const templateID = "template_oxr2dvf";        // ✅ Replace if different
+  const autoReplyTemplate = "template_31xex6k"; // ✅ Replace if different
 
-  emailjs.send(serviceID, templateID, params)
-    .then(() => {
-      formStatus.textContent = "✅ Message sent successfully!";
-      formStatus.style.color = "green";
-      document.getElementById("contactForm").reset();
+  try {
+    // ✅ 1. Send message to YOU
+    await emailjs.send(serviceID, templateID, params);
 
-      // ✅ Auto-reply to the user
-      emailjs.send(serviceID, autoReplyTemplate, {
-        user_name: params.from_name,
-        user_email: params.from_email
-      });
-    })
-    .catch((err) => {
-      console.error(err);
-      formStatus.textContent = "❌ Failed to send message. Please try again.";
-      formStatus.style.color = "red";
+    // ✅ 2. Auto-reply to USER
+    await emailjs.send(serviceID, autoReplyTemplate, {
+      user_email: params.from_email,
+      user_name: params.from_name
     });
+
+    // ✅ 3. Save to MongoDB
+    await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: params.from_name,
+        email: params.from_email,
+        message: params.message,
+      }),
+    });
+
+    formStatus.textContent = "✅ Message Sent!";
+    formStatus.style.color = "green";
+    document.getElementById("contactForm").reset();
+  } 
+  catch (err) {
+    console.error(err);
+    formStatus.textContent = "❌ Failed to send message. Please try again.";
+    formStatus.style.color = "red";
+  }
 });
-
-
-
-
-
-
 
