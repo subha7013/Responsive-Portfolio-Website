@@ -1,8 +1,10 @@
+// Scroll to Top Button
 const btn = document.getElementById("topBtn");
-window.onscroll = () =>{
+window.onscroll = () => {
   btn.style.display = window.scrollY > 200 ? "block" : "none";
 }
-btn.onclick = () => scrollTo({top: 0,behavior: "smooth"});
+btn.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+
 // Dark Mode Toggle
 const darkToggle = document.getElementById('dark-toggle');
 const mobileDarkToggle = document.getElementById('mobileDarkToggle');
@@ -26,20 +28,19 @@ const closeMenu = document.getElementById('closeMenu');
 hamburger.addEventListener('click', () => {
   mobileMenu.classList.add('active');
 });
-
 closeMenu.addEventListener('click', () => {
   mobileMenu.classList.remove('active');
 });
 
+// Load Projects (Swiper)
 async function loadProjectsAndInitSwiper() {
   try {
     const resp = await fetch('projects.json', { cache: "no-store" });
     if (!resp.ok) throw new Error('Failed to load projects.json');
     
     const projects = await resp.json();
-
     const wrapper = document.getElementById('projectsWrapper');
-    wrapper.innerHTML = ''; // clear
+    wrapper.innerHTML = '';
 
     projects.forEach((p) => {
       const techHTML = (p.tech || []).map(t => `<span class="tech-badge">${t}</span>`).join('');
@@ -60,8 +61,7 @@ async function loadProjectsAndInitSwiper() {
       wrapper.appendChild(slide);
     });
 
-    // Initialize Swiper (one card at a time, with arrows + pagination)
-    const swiper = new Swiper('.projects-swiper', {
+    new Swiper('.projects-swiper', {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: false,
@@ -72,12 +72,6 @@ async function loadProjectsAndInitSwiper() {
       pagination: {
         el: '.projects-pagination',
         clickable: true,
-      },
-      breakpoints: {
-        // a little larger screen - still one per view as you chose
-        900: {
-          slidesPerView: 1,
-        }
       }
     });
 
@@ -86,9 +80,7 @@ async function loadProjectsAndInitSwiper() {
   }
 }
 
-// wait for DOMContentLoaded and for Swiper script to exist
 document.addEventListener('DOMContentLoaded', function () {
-  // ensure Swiper is loaded
   if (typeof Swiper === 'undefined') {
     console.error('Swiper not found. Did you include the Swiper script?');
     return;
@@ -96,10 +88,8 @@ document.addEventListener('DOMContentLoaded', function () {
   loadProjectsAndInitSwiper();
 });
 
-
-
-// contact
-(function(){
+// ✅ EMAILJS ONLY (No MongoDB)
+(function() {
   emailjs.init("3pApLSwcAD6Ba5Z_F"); // ✅ Your Public Key
 })();
 
@@ -114,9 +104,9 @@ document.getElementById("contactForm").addEventListener("submit", async function
     message: document.getElementById("message").value,
   };
 
-  const serviceID = "service_9dsieua";          // ✅ Replace if different
-  const templateID = "template_oxr2dvf";        // ✅ Replace if different
-  const autoReplyTemplate = "template_31xex6k"; // ✅ Replace if different
+  const serviceID = "service_9dsieua";
+  const templateID = "template_oxr2dvf";
+  const autoReplyTemplate = "template_31xex6k";
 
   try {
     // ✅ 1. Send message to YOU
@@ -125,28 +115,15 @@ document.getElementById("contactForm").addEventListener("submit", async function
     // ✅ 2. Auto-reply to USER
     await emailjs.send(serviceID, autoReplyTemplate, {
       user_email: params.from_email,
-      user_name: params.from_name
-    });
-
-    // ✅ 3. Save to MongoDB
-    await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: params.from_name,
-        email: params.from_email,
-        message: params.message,
-      }),
+      user_name: params.from_name,
     });
 
     formStatus.textContent = "✅ Message Sent!";
     formStatus.style.color = "green";
     document.getElementById("contactForm").reset();
-  } 
-  catch (err) {
+  } catch (err) {
     console.error(err);
     formStatus.textContent = "❌ Failed to send message. Please try again.";
     formStatus.style.color = "red";
   }
 });
-
