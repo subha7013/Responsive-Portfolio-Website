@@ -27,9 +27,10 @@
       "title": "Weather App",
       "description": "A simple Weather Application built with HTML, CSS, and python script using flask module that uses the OpenWeatherMap API to fetch and display live weather updates 🌍",
       "image": "/assets/project4.png",
-      "live": "https://your-live-demo-2.example.com",
+      "live": "https://weather-app-mtsn.onrender.com/",
       "github": "https://github.com/subha7013/Weather_App.git",
       "tech": ["HTML", "CSS", "Python", "API"]
     }
 ]
+
 
