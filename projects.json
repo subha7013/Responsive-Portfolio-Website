@@ -30,7 +30,16 @@
       "live": "https://weather-app-mtsn.onrender.com/",
       "github": "https://github.com/subha7013/Weather_App.git",
       "tech": ["HTML", "CSS", "Python", "API"]
+    },
+        {
+      "title": "College Predictor Tool",
+      "description": "A web app that predicts engineering colleges and branches based on your exam rank and branch preference. Supports JEE Main, JEE Advanced, and WBJEE with category-priority predictions (ST → SC → OBC → General). Built with HTML, CSS, and JavaScript using a JSON-based dataset.",
+      "image": "/frontend/assets/project5.png",
+      "live": "https://college-pridictor-tool.netlify.app/",
+      "github": "https://github.com/subha7013/College-Predictor-Tool.git",
+      "tech": ["HTML", "CSS", "JS", "JSON"]
     }
 ]
+
 
 
