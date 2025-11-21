@@ -1,11 +1,11 @@
 [
     {
       "title": "Speed-Mart E-Commerce App",
-      "description": "A fast and user-friendly shopping application that allows users to browse products, add items to their cart, add items to wishlist, and place orders seamlessly. It offers an intuitive interface, quick navigation, and a smooth checkout experience for hassle-free online shopping(Frontend based).",
+      "description": "SpeedMart is a fully functional, full-stack E-Commerce web application designed to provide users with a smooth online shopping experience. It features a modern, responsive frontend and a secure, scalable backend. Users can browse products, manage their cart, maintain a wishlist, and place orders — all with real-time updates and clean UI interaction.",
       "image": "/assets/project1.png",
-      "live": "https://sparkly-centaur-c8ab0d.netlify.app/",
-      "github": "https://github.com/subha7013/SpeedMart-E-Commerce-App.git",
-      "tech": ["HTML", "CSS", "JavaScript"]
+      "live": "https://speedmart-order.netlify.app/",
+      "github": "https://github.com/subha7013/speedmart_frontend",
+      "tech": ["HTML", "CSS", "JavaScript","Mongodb","Node.js"]
     },
     {
       "title": "Netflix Clone Website",
@@ -40,6 +40,7 @@
       "tech": ["HTML", "CSS", "JS", "JSON"]
     }
 ]
+
 
 
 
