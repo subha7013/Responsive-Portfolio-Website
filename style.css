@@ -45,7 +45,7 @@ body.dark-mode nav img {
 }
 
 body.dark-mode section{
-  background:linear-gradient(to right,white,rgba(44, 34, 34, 0.751));
+  background:linear-gradient(to left,white,rgba(44, 34, 34, 0.751));
 }
 body.dark-mode section p,h1{
   color: rgba(9, 3, 3, 0.975);
@@ -761,6 +761,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
