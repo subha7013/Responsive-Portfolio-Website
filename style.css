@@ -266,10 +266,19 @@ section.contact{
 }
 
 
-.home-left h2, .about-right h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+.hero-title {
+  font-size: 3rem;          /* Adjust if needed */
+  font-weight: 700;
+  color: #000;
 }
+
+.changing-text {
+  color: #ef4444;           /* Modern red */
+  margin-left: 8px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: inline-block;
+}
+
 
 .home-left p, .about-right p {
   font-size: 1.2rem;
@@ -752,6 +761,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
