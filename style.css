@@ -100,7 +100,7 @@ nav {
 
 
 .nav-logo {
-  height: 60px;
+  height: 70px;
   width: auto;
 }
 
@@ -137,21 +137,21 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
-/* nav button {
-  border: none;
-  padding: 10px;
-  color: white;
-  background-color: red;
-  font-weight: bolder;
-  border-radius: 11px;
-  font-size: 13px;
-} */
 nav button {
   border: none;
   padding: 8px 14px;
-  font-size: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: red;
+  font-weight: bolder;
   border-radius: 10px;
 }
+/* nav button {
+  border: none;
+  padding: 8px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+} */
 
 
 nav button:hover {
@@ -798,6 +798,7 @@ footer {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
