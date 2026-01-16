@@ -16,6 +16,24 @@
 
   changeText();               // initial call
   setInterval(changeText, 2000);
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealOnScroll = () => {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 120;
+
+  revealElements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add("show");
+    }
+  });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 
 // Scroll to Top Button
 const btn = document.getElementById("topBtn");
@@ -146,4 +164,5 @@ document.getElementById("contactForm").addEventListener("submit", async function
     formStatus.style.color = "red";
   }
 });
+
 
