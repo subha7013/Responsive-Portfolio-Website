@@ -138,20 +138,15 @@ nav ul li a:hover {
 }
 
 nav button {
-  border: none;
-  padding: 8px 14px;
-  font-size: 16px;
-  color: white;
-  background-color: red;
-  font-weight: bolder;
-  border-radius: 10px;
+    border: none;
+    padding: 8px 23px;
+    font-size: 14px;
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    border-radius: 10px;
 }
-/* nav button {
-  border: none;
-  padding: 8px 14px;
-  font-size: 16px;
-  border-radius: 10px;
-} */
+
 
 
 nav button:hover {
@@ -798,6 +793,7 @@ footer {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
