@@ -1,3 +1,22 @@
+  const words = ["Subhasish", "Developer", "Engineer"];
+  let index = 0;
+  const textElement = document.querySelector(".changing-text");
+
+  function changeText() {
+    textElement.style.opacity = 0;
+    textElement.style.transform = "translateY(-5px)";
+
+    setTimeout(() => {
+      textElement.textContent = words[index];
+      textElement.style.opacity = 1;
+      textElement.style.transform = "translateY(0)";
+      index = (index + 1) % words.length;
+    }, 500);
+  }
+
+  changeText();               // initial call
+  setInterval(changeText, 2000);
+
 // Scroll to Top Button
 const btn = document.getElementById("topBtn");
 window.onscroll = () => {
@@ -127,3 +146,4 @@ document.getElementById("contactForm").addEventListener("submit", async function
     formStatus.style.color = "red";
   }
 });
+
