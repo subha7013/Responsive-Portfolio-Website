@@ -267,9 +267,8 @@ section.contact{
 
 
 .home-left h2, .about-right h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 15px;
-  color: #222;
 }
 
 .home-left p, .about-right p {
@@ -753,6 +752,7 @@ footer {
     width: 100%;
   }
 }
+
 
 
 
