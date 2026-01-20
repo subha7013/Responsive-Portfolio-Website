@@ -253,6 +253,9 @@ section {
   padding: 80px 10%;
   background: linear-gradient(to right,white,rgb(36, 88, 245));
 }
+section.skills h1,section.perks h1{
+  text-align: center;
+}
 section.contact{
   border-radius: 17px;
   margin: 10px 15px;
@@ -339,15 +342,18 @@ section.contact{
   display: inline-block;
   margin-top: 15px;
   padding: 12px 24px;
-  background-color: #0077b5;
+  background-color: #a40000;
   color: #fff;
   text-decoration: none;
+  font-weight: bolder;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-  background-color: #005f91;
+  background-color: #f3f4f5;
+  color: red;
+  font-weight: bolder;
 }
 
 /* Skills Section */
@@ -638,6 +644,77 @@ body.dark-mode .code:hover{
 body.dark-mode .swiper-pagination-bullet{
   background-color: red;
 }
+/*Achievements section*/
+.section-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-item {
+  display: grid;
+  grid-template-columns: 2.6fr 0.6fr 0.4fr 0.8fr;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ach-title {
+  font-weight: 600;
+}
+
+.ach-title span {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+.ach-timeline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ach-timeline .dot {
+  width: 10px;
+  height: 10px;
+  background: #4f46e5;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ach-timeline .line {
+  position: absolute;
+  width: 2px;
+  height: 120%;
+  background: #c7d2fe;
+  top: -60%;
+}
+
+.ach-view {
+  display: flex;
+  align-items: center;
+}
+
+.ach-view a {
+  display: inline-flex;
+}
+
+.ach-view a:hover {
+  transform: scale(1.15);
+  transition: transform 0.2s ease;
+}
+
+.ach-date {
+  font-size: 14px;
+  color: #374151;
+}
 
 /* contact section */
 .contact {
@@ -770,7 +847,16 @@ footer {
   #contactForm {
     width: 100%;
   }
+  .achievement-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ach-timeline {
+    display: none;
+  }
 }
+
 
    /* SCROLL REVEAL ANIMATIONS */
 
@@ -793,7 +879,6 @@ footer {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
-
 
 
 
