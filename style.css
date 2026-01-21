@@ -72,8 +72,9 @@ body.dark-mode nav ul li a:hover {
 }
 
 body.dark-mode .btn {
-  background-color: #4f4141;
+  background-color: #fe0101e2;
   font-weight: bolder;
+  color: white;
 }
 
 body.dark-mode .contactForm .msg {
@@ -83,7 +84,7 @@ body.dark-mode .contactForm .msg {
 
 body.dark-mode .btn:hover {
   transform: scale(1.05);
-  color: black;
+  color: rgb(250, 0, 0);
   background-color: white;
   font-weight: bolder;
 }
@@ -339,19 +340,62 @@ section.contact {
 
 .social-icons a {
   margin-right: 20px;
-  font-size: 1.8rem;
-  color: #333;
-  transition: color 0.3s ease;
+  width: 58px;
+  height: 58px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 8px 22px rgba(0, 0, 0, 0.12);
+  transition: 
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .social-icons img {
-  width: 42px;
-  display: inline-flex;
+  width: 28px;
+  transition: transform 0.3s ease;
 }
 
-.social-icons a img:hover {
-  transform: scale(1.07);
+/* Hover: subtle lift */
+.social-icons a:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.18);
 }
+
+/* Click animation */
+.social-icons a:active {
+  transform: scale(0.92);
+  box-shadow:
+    0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.social-icons a:active img {
+  transform: scale(0.85);
+}
+
+.social-icons a::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.6s ease;
+}
+
+.social-icons a:active::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
 
 .home-right,
 .about-left {
@@ -415,8 +459,8 @@ section img {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 24px;
-  background-color: #a40000;
-  color: #fff;
+  background-color: #fff;
+  color: rgb(16, 192, 39);
   text-decoration: none;
   font-weight: bolder;
   border-radius: 8px;
@@ -424,8 +468,8 @@ section img {
 }
 
 .btn:hover {
-  background-color: #f3f4f5;
-  color: red;
+  background-color: #05c912;
+  color: rgb(241, 228, 228);
   font-weight: bolder;
 }
 
