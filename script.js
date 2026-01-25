@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ✅ EMAILJS ONLY (No MongoDB)
-(function() {
+(function () {
   emailjs.init("3pApLSwcAD6Ba5Z_F"); // ✅ Your Public Key
 })();
 
@@ -181,6 +181,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
   e.preventDefault();
 
   const formStatus = document.getElementById("formStatus");
+  const submitBtn = this.querySelector("button[type='submit']");
 
   const params = {
     from_name: document.getElementById("name").value,
@@ -192,11 +193,15 @@ document.getElementById("contactForm").addEventListener("submit", async function
   const templateID = "template_oxr2dvf";
   const autoReplyTemplate = "template_31xex6k";
 
+  // ✅ SHOW LOADER IMMEDIATELY
+  showLoader("Sending message...");
+  submitBtn.disabled = true;
+
   try {
-    // ✅ 1. Send message to YOU
+    // 1️⃣ Send message to YOU
     await emailjs.send(serviceID, templateID, params);
 
-    // ✅ 2. Auto-reply to USER
+    // 2️⃣ Auto-reply to USER
     await emailjs.send(serviceID, autoReplyTemplate, {
       user_email: params.from_email,
       user_name: params.from_name,
@@ -204,13 +209,22 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
     formStatus.textContent = "✅ Message Sent!";
     formStatus.style.color = "green";
-    document.getElementById("contactForm").reset();
+    this.reset();
+
   } catch (err) {
     console.error(err);
     formStatus.textContent = "❌ Failed to send message. Please try again.";
     formStatus.style.color = "red";
+
+  } finally {
+    // ✅ HIDE LOADER ONLY AFTER RESULT IS SHOWN
+    setTimeout(() => {
+      hideLoader();
+      submitBtn.disabled = false;
+    }, 300);
   }
 });
+
 /* ===============================
    SMART LOADER NAVIGATION HANDLER
    =============================== */
@@ -252,5 +266,6 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
   });
   
+
 
 
