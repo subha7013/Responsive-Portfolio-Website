@@ -1,3 +1,45 @@
+/* ===== Glass Loader Overlay ===== */
+#global-loader {
+  position: fixed;
+  inset: 0;
+
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99999;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+#global-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ===== Google-style Loader ===== */
+.g-loader {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  border-top-color: #fbbc05;
+  border-right-color: #34a853;
+  border-bottom-color: #4285f4;
+  border-left-color: #ea4335;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+
 /* -------------------------------------------
    1) GLOBAL RESET & BASE STYLES
 ------------------------------------------- */
@@ -1042,3 +1084,4 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
