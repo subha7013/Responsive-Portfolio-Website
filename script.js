@@ -1,4 +1,51 @@
-  const words = ["Subhasish", "Developer", "Engineer"];
+// Loader
+window.addEventListener("load", () => {
+  const loader = document.getElementById("global-loader");
+  if (loader) {
+    setTimeout(() => loader.classList.add("hidden"), 300);
+  }
+});
+
+window.showLoader = () => {
+  document.getElementById("global-loader")?.classList.remove("hidden");
+};
+
+window.hideLoader = () => {
+  document.getElementById("global-loader")?.classList.add("hidden");
+};
+
+/* ===============================
+   LOADER TRIGGERS (CLICK ACTIONS)
+   =============================== */
+
+/* 1. Resume Download */
+document.querySelectorAll('a[download]').forEach(link => {
+  link.addEventListener('click', () => {
+    showLoader("Downloading resume...");
+    setTimeout(hideLoader, 1200);
+  });
+});
+
+/* 2. Projects: Live Demo & GitHub (dynamic content safe) */
+document.addEventListener("click", (e) => {
+  const link = e.target.closest("a");
+  if (!link) return;
+
+  if (link.classList.contains("live") || link.classList.contains("code")) {
+    showLoader("Opening project...");
+    setTimeout(hideLoader, 1200);
+  }
+});
+
+/* 3. Achievements: Certificate View */
+document.querySelectorAll(".ach-view a img").forEach(link => {
+  link.addEventListener("click", () => {
+    showLoader("Opening certificate...");
+    setTimeout(hideLoader, 1200);
+  });
+});
+
+const words = ["Subhasish", "Developer", "Engineer"];
   let index = 0;
   const textElement = document.querySelector(".changing-text");
 
@@ -164,5 +211,46 @@ document.getElementById("contactForm").addEventListener("submit", async function
     formStatus.style.color = "red";
   }
 });
+/* ===============================
+   SMART LOADER NAVIGATION HANDLER
+   =============================== */
+
+   document.addEventListener("click", function (e) {
+    const link = e.target.closest("a");
+    if (!link) return;
+  
+    const isDownload = link.hasAttribute("download");
+    const isProject =
+      link.classList.contains("live") ||
+      link.classList.contains("code");
+    const isCertificate = link.closest(".ach-view");
+  
+    if (isDownload || isProject || isCertificate) {
+      e.preventDefault(); // ⛔ stop instant navigation
+  
+      const href = link.href;
+      const target = link.target || "_self";
+  
+      // show loader FIRST
+      showLoader(
+        isDownload
+          ? "Downloading resume..."
+          : isCertificate
+          ? "Opening certificate..."
+          : "Opening project..."
+      );
+  
+      // open after loader is visible
+      setTimeout(() => {
+        if (target === "_blank") {
+          window.open(href, "_blank", "noopener");
+        } else {
+          window.location.href = href;
+        }
+        hideLoader();
+      }, 450); // ← perfect UX delay
+    }
+  });
+  
 
 
