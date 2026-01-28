@@ -131,7 +131,6 @@ body.dark-mode .btn:hover {
   font-weight: bolder;
 }
 
-body.dark-mode section p,
 body.dark-mode section h1 {
   color: #e0e425;
 }
@@ -323,6 +322,9 @@ section {
     #f8fafc,   /* Slate-50 */
     #eef2ff    /* Indigo-50 */
   );
+}
+section h1{
+  color : black;
 }
 
 
@@ -1095,6 +1097,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
