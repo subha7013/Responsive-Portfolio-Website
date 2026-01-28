@@ -317,8 +317,13 @@ section {
   border-radius: 17px;
   margin: 10px 15px;
   padding: 80px 10%;
-  background: linear-gradient(to right, white, rgb(36, 88, 245));
+  background: linear-gradient(
+    135deg,
+    #f8fafc,   /* Slate-50 */
+    #eef2ff    /* Indigo-50 */
+  );
 }
+
 
 section.skills h1,
 section.perks h1 {
@@ -329,8 +334,13 @@ section.contact {
   border-radius: 17px;
   margin: 10px 15px;
   padding: 80px 10%;
-  background: linear-gradient(to right, white, rgb(36, 88, 245));
+  background: linear-gradient(
+    135deg,
+    #eef2ff,   /* Indigo-50 */
+    #e0e7ff    /* Indigo-100 */
+  );
 }
+
 
 /* Home */
 .home-content,
@@ -1084,4 +1094,5 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
