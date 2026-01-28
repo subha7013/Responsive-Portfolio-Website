@@ -131,6 +131,7 @@ body.dark-mode .btn:hover {
   font-weight: bolder;
 }
 
+body.dark-mode section p,
 body.dark-mode section h1 {
   color: #e0e425;
 }
@@ -1094,6 +1095,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
