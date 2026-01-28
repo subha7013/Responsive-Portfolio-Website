@@ -132,7 +132,7 @@ body.dark-mode .btn:hover {
 }
 
 body.dark-mode section h1 {
-  color: rgb(252, 252, 1);
+  color: #0f172a;
 }
 
 /* -------------------------------------------
@@ -1094,5 +1094,6 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
