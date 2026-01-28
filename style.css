@@ -464,7 +464,7 @@ section.contact {
 }
 
 /* Section Images - Fully Responsive */
-.home-right img,
+
 .about-left img,
 section img {
   width: 100%;
@@ -476,6 +476,15 @@ section img {
   border-radius: 15px;
 }
 
+.home-right img{
+  width: 340px;
+  max-width: 400px;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+}
 .about-right h2 {
   position: relative;
   font-size: 1.5rem;
@@ -1097,6 +1106,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
