@@ -477,9 +477,10 @@ section img {
 }
 
 .home-right img {
-  width: 340px;
-  height: 340px;
-  max-width: 340px;
+  width: 360px;
+  height: 440px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
 
   object-fit: cover;
   display: block;
@@ -526,8 +527,8 @@ section img {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 24px;
-  background-color: #fff;
-  color: rgb(16, 192, 39);
+  background-color:rgb(16, 192, 39);
+  color: #fff;
   text-decoration: none;
   font-weight: bolder;
   border-radius: 8px;
@@ -535,8 +536,8 @@ section img {
 }
 
 .btn:hover {
-  background-color: #05c912;
-  color: rgb(241, 228, 228);
+  background-color:rgb(241, 228, 228);
+  color:  #05c912;
   font-weight: bolder;
 }
 
@@ -1044,7 +1045,7 @@ footer p {
 
   .home-right img,
   .about-left img {
-    max-width: 250px;
+    max-width: 350px;
   }
 
   .home,
@@ -1109,7 +1110,6 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
-
 
 
 
