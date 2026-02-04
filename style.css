@@ -672,6 +672,7 @@ body.dark-mode .skills-box ul li {
   gap: 40px;
   padding: 20px 0;
   transition: transform 0.5s;
+  flex-direction: row;
   
 }
 .b1 ul li {
@@ -1175,6 +1176,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
