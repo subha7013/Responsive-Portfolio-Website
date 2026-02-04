@@ -580,13 +580,15 @@ body.dark-mode #contactForm button:hover {
 }
 
 
+
 .skills-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
+  gap: 40px;
   flex-wrap: wrap;
-  gap: 20px;
 }
+
 
 .skills-box {
   background: #fff;
@@ -661,16 +663,44 @@ body.dark-mode .skills-box ul li {
   width: 100%;
   height: 29vh;
 }
-.b1 ul{
+
+.b1 ul {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   justify-content: center;
-  width: 50%;
-  height: 50%;
-  gap: 50px;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
   transition: transform 0.5s;
+  
 }
+.b1 ul li {
+  list-style: none;
+}
+
+.b1 ul li img {
+  width: 44px;
+  height: 44px;
+  transition: transform 0.3s ease;
+}
+
+.b1 ul li:hover img {
+  transform: scale(1.15);
+}
+.b2 {
+  width: 55%;
+}
+.b2 ul {
+  list-style: none;
+  padding: 0;
+}
+.b2 ul li {
+  font-size: 1.1rem;
+  margin: 14px 0;
+  color: #2814c0;
+}
+
+
 
 
 /* Projects section styles */
@@ -1053,6 +1083,19 @@ footer p {
     max-width: 400px;
     margin: 10px 0;
   }
+    .skills-box.b1,
+  .skills-box.b2 {
+    width: 100%;
+  }
+
+  .skills-box.b1 ul {
+    gap: 25px;
+  }
+
+  .skills-box.b1 ul li img {
+    width: 36px;
+    height: 36px;
+  }
 
   .section-title {
     font-size: 2rem;
@@ -1132,6 +1175,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
