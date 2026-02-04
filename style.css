@@ -1087,6 +1087,7 @@ footer p {
     .skills-box.b1,
   .skills-box.b2 {
     width: 100%;
+    height: auto;
   }
 
   .skills-box.b1 ul {
@@ -1176,6 +1177,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
