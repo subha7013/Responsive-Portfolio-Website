@@ -1045,7 +1045,8 @@ footer p {
 
   .home-right img,
   .about-left img {
-    max-width: 350px;
+        max-width: 296px;
+        height: 340px;
   }
 
   .home,
@@ -1110,6 +1111,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
