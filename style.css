@@ -7,7 +7,6 @@
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -641,7 +640,7 @@ body.dark-mode .skills-box h3 {
   gap: 10px;
   margin: 10px 0;
   font-size: 1.1rem;
-  color: #333;
+  color: #2814c0;
 }
 
 body.dark-mode .skills-box ul li {
@@ -657,6 +656,22 @@ body.dark-mode .skills-box ul li {
 .skills-box ul li:hover img {
   transform: scale(1.2);
 }
+
+.b1{
+  width: 100%;
+  height: 22vh;
+}
+.b1 ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  gap: 50px;
+  transition: transform 0.5s;
+}
+
 
 /* Projects section styles */
 .projects-wrapper {
@@ -1117,6 +1132,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
