@@ -14,24 +14,20 @@ window.hideLoader = () => {
   document.getElementById("global-loader")?.classList.add("hidden");
 };
 
-function showTimeline(tab){
+function showTimeline(tab,index){
 
   const timelines = document.querySelectorAll(".timeline");
   const buttons = document.querySelectorAll(".tab-btn");
+  const slider = document.querySelector(".switch-slider");
 
-  timelines.forEach(t => t.classList.remove("active"));
-  buttons.forEach(b => b.classList.remove("active"));
+  timelines.forEach(t=>t.classList.remove("active"));
+  buttons.forEach(b=>b.classList.remove("active"));
 
   document.getElementById(tab).classList.add("active");
+  buttons[index].classList.add("active");
 
-  if(tab === "education"){
-    buttons[0].classList.add("active");
-  }else{
-    buttons[1].classList.add("active");
-  }
-
+  slider.style.transform = `translateX(${index*100}%)`;
 }
-
 /* ===============================
    LOADER TRIGGERS (CLICK ACTIONS)
    =============================== */
@@ -284,6 +280,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
   });
   
+
 
 
 
