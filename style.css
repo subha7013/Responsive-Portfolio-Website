@@ -1105,7 +1105,7 @@ footer p {
         max-width: 296px;
         height: 340px;
   }
-  .timeline-tabs{
+  .timeline-tabs,.tab-underline{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1438,6 +1438,7 @@ display:none;
     transform:translateY(0);
   }
 }
+
 
 
 
