@@ -83,9 +83,59 @@
       <h1>About Me</h1>
       <div class="about-content">
         <!-- Left side -->
-        <div class="about-left reveal reveal-left">
-          <img src="/assets/profile.jpg" alt="Subhasish Profile Picture">
-        </div>
+       <div class="about-left reveal reveal-left">
+
+  <img src="/assets/profile.jpg" alt="Subhasish Profile Picture">
+
+  <!-- SWITCH BUTTONS -->
+  <div class="timeline-switch">
+    <button class="tab-btn active" onclick="showTimeline('education')">Education</button>
+    <button class="tab-btn" onclick="showTimeline('experience')">Experience</button>
+  </div>
+
+  <!-- EDUCATION TIMELINE -->
+  <div id="education" class="timeline active">
+    
+    <div class="timeline-item">
+      <span class="dot blue"></span>
+      <div>
+        <h4>Tapsia Vidyasagar HS</h4>
+        <p>Higher Secondary</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="dot red"></span>
+      <div>
+        <h4>MCKV Institute of Engineering</h4>
+        <p>B.Tech IT (2023 - 2027)</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EXPERIENCE TIMELINE -->
+  <div id="experience" class="timeline">
+
+    <div class="timeline-item">
+      <span class="dot blue"></span>
+      <div>
+        <h4>Associate Trainee</h4>
+        <p>IBM — Internship</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <span class="dot blue"></span>
+      <div>
+        <h4>Frontend Intern</h4>
+        <p>Edunet Foundation</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
         <!-- Right side -->
         <div class="about-right reveal reveal-right">
           <h2 style="text-align: center;">Hello, I'm Subhasish Nath</h2>
@@ -262,6 +312,7 @@
 </body>
 
 </html>
+
 
 
 
