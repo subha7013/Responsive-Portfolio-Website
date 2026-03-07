@@ -464,16 +464,14 @@ section.contact {
 
 /* Section Images - Fully Responsive */
 
-/* .about-left img,
-section img {
+.about-left,
+section {
   width: 100%;
   max-width: 400px;
   height: auto;
-  object-fit: cover;
-  display: block;
   margin: 0 auto;
   border-radius: 15px;
-} */
+}
 
 .home-right img {
   width: 360px;
@@ -1269,6 +1267,7 @@ footer p {
 .red{
   background:#ff2e2e;
 }
+
 
 
 
