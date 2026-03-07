@@ -358,11 +358,13 @@ section.contact {
 }
 
 .home-left,
-.about-right {
+.about-right,.about-left {
   flex: 1;
   min-width: 280px;
 }
-
+.about-left{
+  padding: 0;
+}
 .home-left {
   text-align: center;
 }
@@ -1428,6 +1430,7 @@ display:none;
     transform:translateY(0);
   }
 }
+
 
 
 
