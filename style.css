@@ -1104,8 +1104,7 @@ footer p {
     font-size: 2rem;
   }
 
-  .home-right img,
-  .about-left img {
+  .home-right img {
         max-width: 296px;
         height: 340px;
   }
@@ -1267,6 +1266,7 @@ footer p {
 .red{
   background:#ff2e2e;
 }
+
 
 
 
