@@ -463,16 +463,7 @@ section.contact {
 
 /* Section Images - Fully Responsive */
 
-/* .about-left,
-section img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border-radius: 15px;
-} */
+
 
 .home-right img {
   width: 360px;
@@ -1338,10 +1329,18 @@ transition:0.35s;
 TIMELINE
 =============================== */
 
+
 .timeline{
-position:relative;
-padding-left:40px;
-   animation:fadeIn 0.4s ease;
+  display:none;
+  position:relative;
+  margin-top:20px;
+  padding-left:35px;
+  padding-left:40px;
+  animation:fadeIn 0.4s ease;
+}
+
+.timeline.active{
+  display:block;
 }
 
 .timeline::before{
@@ -1356,6 +1355,12 @@ to bottom,
 #4c5fd5,
 #ff3d3d
 );
+animation:growLine 1s ease;
+}
+
+@keyframes growLine{
+  from{height:0}
+  to{height:100%}
 }
 
 /* timeline item */
@@ -1423,6 +1428,7 @@ display:none;
     transform:translateY(0);
   }
 }
+
 
 
 
