@@ -38,8 +38,17 @@
       "live": "https://college-pridictor-tool.netlify.app/",
       "github": "https://github.com/subha7013/College-Predictor-Tool.git",
       "tech": ["HTML", "CSS", "JS", "JSON"]
-    }
+    },
+    {
+  "title": "ChatSquare² - Real-Time Chat Application",
+  "description": "A real-time web chat application that enables private messaging between active users using WebSockets. Features include live user tracking, typing indicators, message timestamps, responsive design for mobile and desktop, and one-to-one chat by selecting online users. Built with Node.js, Express, and Socket.IO.",
+  "image": "/assets/project6.png",
+  "live": "https://chatsquaree.netlify.app/",
+  "github": "https://github.com/subha7013/ChatSquare.git",
+  "tech": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "Socket.IO"]
+}
 ]
+
 
 
 
