@@ -1105,6 +1105,11 @@ footer p {
         max-width: 296px;
         height: 340px;
   }
+  .timeline-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .home,
   .about,
@@ -1433,6 +1438,7 @@ display:none;
     transform:translateY(0);
   }
 }
+
 
 
 
