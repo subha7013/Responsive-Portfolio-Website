@@ -1407,6 +1407,10 @@ font-size:14px;
 color:#444;
 }
 
+
+#experience{
+display:none;
+}
 /* fade animation */
 
 @keyframes fadeIn{
@@ -1419,6 +1423,7 @@ color:#444;
     transform:translateY(0);
   }
 }
+
 
 
 
