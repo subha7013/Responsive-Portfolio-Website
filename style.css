@@ -451,8 +451,7 @@ section.contact {
 }
 
 
-.home-right,
-.about-left {
+.home-right{
   flex: 1;
   text-align: center;
   min-width: 280px;
@@ -1268,6 +1267,7 @@ footer p {
 .red{
   background:#ff2e2e;
 }
+
 
 
 
