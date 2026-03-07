@@ -16,17 +16,20 @@ window.hideLoader = () => {
 
 function showTimeline(tab,index){
 
-  const timelines = document.querySelectorAll(".timeline");
-  const buttons = document.querySelectorAll(".tab-btn");
-  const slider = document.querySelector(".switch-slider");
+const timelines=document.querySelectorAll(".timeline");
+const buttons=document.querySelectorAll(".tab-btn");
+const underline=document.querySelector(".tab-underline");
 
-  timelines.forEach(t=>t.classList.remove("active"));
-  buttons.forEach(b=>b.classList.remove("active"));
+timelines.forEach(t=>t.style.display="none");
+buttons.forEach(b=>b.classList.remove("active"));
 
-  document.getElementById(tab).classList.add("active");
-  buttons[index].classList.add("active");
+document.getElementById(tab).style.display="block";
+buttons[index].classList.add("active");
 
-  slider.style.transform = `translateX(${index*100}%)`;
+/* move underline */
+
+underline.style.transform=`translateX(${index*150}px)`;
+
 }
 /* ===============================
    LOADER TRIGGERS (CLICK ACTIONS)
@@ -280,6 +283,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
   });
   
+
 
 
 
