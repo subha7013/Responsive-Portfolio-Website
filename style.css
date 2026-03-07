@@ -1011,20 +1011,21 @@ body.dark-mode .swiper-pagination-bullet {
 
 /* Footer */
 footer {
-  text-align: center;
+  
   font-size: 1rem;
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: #666;
+  background-color: #0a3133;
   color: #f8f6f6;
   height: auto;
   padding: 15px 0;
   border-radius: 8px;
-  margin: 6px;
+  margin: 0;
 }
 
 footer p {
   color: white;
+  text-align: center;
 }
 
 /* -------------------------------------------
@@ -1177,6 +1178,7 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
+
 
 
 
