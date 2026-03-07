@@ -14,6 +14,24 @@ window.hideLoader = () => {
   document.getElementById("global-loader")?.classList.add("hidden");
 };
 
+function showTimeline(tab){
+
+  const timelines = document.querySelectorAll(".timeline");
+  const buttons = document.querySelectorAll(".tab-btn");
+
+  timelines.forEach(t => t.classList.remove("active"));
+  buttons.forEach(b => b.classList.remove("active"));
+
+  document.getElementById(tab).classList.add("active");
+
+  if(tab === "education"){
+    buttons[0].classList.add("active");
+  }else{
+    buttons[1].classList.add("active");
+  }
+
+}
+
 /* ===============================
    LOADER TRIGGERS (CLICK ACTIONS)
    =============================== */
@@ -266,6 +284,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
     }
   });
   
+
 
 
 
