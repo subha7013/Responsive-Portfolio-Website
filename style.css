@@ -1182,63 +1182,110 @@ footer p {
 /* ===============================
    EDUCATION / EXPERIENCE TIMELINE
 ================================ */
+/* ===== TIMELINE SWITCH ===== */
 
 .timeline-switch{
+  position:relative;
   display:flex;
   justify-content:center;
-  gap:10px;
-  margin-top:25px;
+  width:220px;
+  margin:25px auto;
+  background:#e5e5e5;
+  border-radius:30px;
+  overflow:hidden;
 }
 
-.tab-btn{
-  padding:8px 18px;
+.timeline-switch button{
+  flex:1;
+  padding:8px 0;
   border:none;
-  background:#222;
-  color:white;
-  border-radius:6px;
-  cursor:pointer;
+  background:transparent;
   font-weight:bold;
+  cursor:pointer;
+  z-index:2;
 }
 
-.tab-btn.active{
+/* sliding animation */
+
+.switch-slider{
+  position:absolute;
+  width:50%;
+  height:100%;
   background:#ffe600;
-  color:black;
+  border-radius:30px;
+  transition:transform 0.35s ease;
 }
 
-/* timeline container */
+/* ===== TIMELINE ===== */
 
 .timeline{
   display:none;
   position:relative;
   margin-top:20px;
-  padding-left:25px;
-  text-align:left;
+  padding-left:35px;
+  animation:fadeIn 0.4s ease;
 }
 
 .timeline.active{
   display:block;
 }
 
-/* vertical line */
+/* animated vertical line */
 
 .timeline::before{
   content:"";
   position:absolute;
-  left:7px;
+  left:10px;
   top:0;
   width:3px;
   height:100%;
-  background:#4c5fd5;
+  background:linear-gradient(
+    to bottom,
+    #4c5fd5,
+    #ff3d3d
+  );
+  animation:growLine 1s ease;
 }
 
-/* items */
+@keyframes growLine{
+  from{height:0}
+  to{height:100%}
+}
+
+/* timeline item */
 
 .timeline-item{
   display:flex;
-  align-items:flex-start;
   gap:15px;
-  margin-bottom:25px;
+  margin-bottom:28px;
+  align-items:flex-start;
 }
+
+/* glowing node */
+
+.dot{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  margin-top:5px;
+  position:relative;
+}
+
+.blue{
+  background:#4c5fd5;
+  box-shadow:
+    0 0 6px #4c5fd5,
+    0 0 12px #4c5fd5;
+}
+
+.red{
+  background:#ff3d3d;
+  box-shadow:
+    0 0 6px #ff3d3d,
+    0 0 12px #ff3d3d;
+}
+
+/* text */
 
 .timeline-item h4{
   margin:0;
@@ -1246,41 +1293,23 @@ footer p {
 }
 
 .timeline-item p{
-  margin:2px 0 0;
+  margin:3px 0 0;
   font-size:13px;
   color:#666;
 }
 
-/* dots */
+/* fade animation */
 
-.dot{
-  width:14px;
-  height:14px;
-  border-radius:50%;
-  margin-top:5px;
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
-
-.blue{
-  background:#4c5fd5;
-}
-
-.red{
-  background:#ff2e2e;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
