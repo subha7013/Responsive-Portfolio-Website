@@ -358,7 +358,7 @@ section.contact {
 }
 
 .home-left,
-.about-right,.about-left {
+.about-right {
   flex: 1;
   min-width: 280px;
 }
@@ -486,6 +486,9 @@ section.contact {
   font-weight: 700;
   color: #ffffff;
   overflow: hidden;
+}
+.about-right {
+    padding-top: 50px;
 }
 
 .about-right h2 {
@@ -1337,7 +1340,7 @@ TIMELINE
   position:relative;
   margin-top:20px;
   padding-left:35px;
-  padding-left:40px;
+  padding-top: 0;
   animation:fadeIn 0.4s ease;
 }
 
@@ -1430,6 +1433,7 @@ display:none;
     transform:translateY(0);
   }
 }
+
 
 
 
