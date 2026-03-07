@@ -720,31 +720,25 @@ body.dark-mode .skills-box ul li {
 /* Slide card */
 .project-card {
   display: flex;
-  align-items: center;
-  gap: 35px;
+  flex-direction: column;
+  gap: 13px;
   background: #faf9f9;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: 30px;
+  padding: 18px;
+  min-height: 420px;
+  align-items: stretch;
 }
 
 /* image */
 .project-card .thumb {
-  width: 45%;
-  height: 260px;
+  width: 100%;
+  height: 20vh;
   object-fit: cover;
-  border-radius: 10px;
-}
-.project-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  border-radius: 8px;
+  background: #f2f2f2;
 }
 
-.project-content p {
-  text-align: left;
-}
 .projects h1 {
   text-align: center;
 }
@@ -765,10 +759,10 @@ body.dark-mode .skills-box ul li {
 
 /* tech badges */
 .tech-list {
+  margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 6px;
+  gap: 8px;
 }
 
 .tech-badge {
@@ -1121,22 +1115,13 @@ footer p {
     padding-top: 20px;
   }
 
-.project-card{
-  flex-direction: column;
-}
+  .project-card {
+    min-height: 420px;
+  }
 
-.project-card .thumb{
-  width: 100%;
-  height: 220px;
-}
-
-.project-content p{
-  text-align: center;
-}
-
-.project-links{
-  justify-content: center;
-}
+  .project-card .thumb {
+    height: 220px;
+  }
 
   .contact {
     padding: 40px 20px;
@@ -1192,7 +1177,6 @@ footer p {
   opacity: 1;
   transform: translateX(0) translateY(0);
 }
-
 
 
 
