@@ -2,320 +2,335 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio-Subhasish Nath</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Subhasish Nath</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
 </head>
 
 <body>
 
-  <div id="global-loader">
-    <div class="g-loader"></div>
-  </div>
-  
-  <img src="/assets/top.svg" id="topBtn" alt="">
-  <header>
-    <nav>
-      <div class="nav-logo">
-        <img src="logo.png" width="120" height="60" alt="logo.svg">
-      </div>
-
-      <!-- Navigation Links -->
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#perks">Achievements</a></li>
-        <li><button><a href="#contact-me">Contact me</a></button></li>
-        <li><img src="/assets/dark.svg" id="dark-toggle" alt="Dark Mode"></li>
-      </ul>
-
-      <!-- Hamburger Icon (for mobile) -->
-      <img src="/assets/hamburger.svg" class="hamburger" id="hamburger" alt="Menu">
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" id="mobileMenu">
-      <img src="/assets/close.svg" id="closeMenu" class="close-icon" alt="Close">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#perks">Achievements</a></li>
-        <li><button><a href="#contact-me">Contact me</a></button></li>
-        <li><img src="/assets/dark.svg" id="mobileDarkToggle" alt="Dark Mode"></li>
-      </ul>
-    </div>
-  </header>
-
-  <main>
-    <!-- Home -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <!-- Left side -->
-        <div class="home-left reveal reveal-left">
-          <h1 class="hero-title">
-            Hello, I’m
-            <span class="changing-text"></span>
-          </h1>
-
-          <p>
-            I’m passionate about web development and love crafting clean, functional, and responsive websites that turn
-            ideas into meaningful digital experiences..</p>
-        </div>
-
-        <!-- Right side -->
-        <div class="home-right reveal reveal-right">
-          <img src="/assets/profile.jpg" alt="Subhasish Profile Picture">
-        </div>
-      </div>
-    </section><br>
-    <div class="partition"></div><br>
-    <!-- About -->
-    <section class="about" id="about">
-      <h1>About Me</h1>
-      <div class="about-content">
-        <!-- Left side -->
-       <div class="about-left reveal reveal-left">
-  <!-- SWITCH BUTTONS -->
-  <div class="timeline-switch">
-    <button class="tab-btn active" onclick="showTimeline('education')">Education</button>
-    <button class="tab-btn" onclick="showTimeline('experience')">Experience</button>
-  </div>
-
-  <!-- EDUCATION TIMELINE -->
-  <div id="education" class="timeline active">
-    
-    <div class="timeline-item">
-      <span class="dot blue"></span>
-      <div>
-        <h4>Tapsia Vidyasagar HS</h4>
-        <p>Higher Secondary</p>
-      </div>
+    <div id="global-loader">
+        <div class="g-loader"></div>
     </div>
 
-    <div class="timeline-item">
-      <span class="dot red"></span>
-      <div>
-        <h4>MCKV Institute of Engineering</h4>
-        <p>B.Tech IT (2023 - 2027)</p>
-      </div>
-    </div>
+    <img src="/assets/top.svg" id="topBtn" alt="">
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="logo.png" width="120" height="60" alt="logo.svg">
+            </div>
 
-  </div>
-
-  <!-- EXPERIENCE TIMELINE -->
-  <div id="experience" class="timeline">
-
-    <div class="timeline-item">
-      <span class="dot blue"></span>
-      <div>
-        <h4>Associate Trainee</h4>
-        <p>IBM — Internship</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <span class="dot blue"></span>
-      <div>
-        <h4>Frontend Intern</h4>
-        <p>Edunet Foundation</p>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-        <!-- Right side -->
-        <div class="about-right reveal reveal-right">
-          <h2 style="text-align: center;">Hello, I'm Subhasish Nath</h2>
-          <p>
-            I'm currently a third-year B.Tech student specializing in Information Technology at MCKV
-            Institute of Engineering. I am passionate about building user-friendly websites and
-            applications, and I enjoy turning complex problems into simple, beautiful, and intuitive
-            designs.
-          </p>
-          <p>
-            I’m constantly learning and exploring new technologies to grow as a developer. My goal is to
-            contribute to impactful projects while enhancing my skills in full-stack development with Responsive
-            Websites and
-            problem-solving.
-          </p><br>
-          <a href="/resume.pdf" download class="btn">Download Resume</a><br><br>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/subhasish-nath-a39193365/" target="_blank">
-              <img src="/assets/linkedin.svg" alt="LinkedIn" srcset="">
-            </a>
-            <a href="https://github.com/subha7013" target="_blank">
-              <img src="/assets/github.svg" alt="">
-            </a>
-            <a href="https://www.instagram.com/s_ubha713" target="_blank">
-              <img src="/assets/insta.svg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section><br>
-    <div class="partition"></div><br>
-    <section class="skills" id="skills">
-      <h1>Skills</h1>
-      <div class="skills-content">
-
-        <p>
-          Here are some of the technologies and tools I work with to build fast, responsive, and user-friendly web
-          experiences.
-        </p>
-
-        <div class="skills-grid">
-          <!-- Left side - Frontend -->
-          <div class="skills-box b1 reveal reveal-left">
-            <h3>Programming Languages & Technologies</h3>
-            <ul>
-              <li><img src="/assets/html.svg" alt="Html"></li>
-              <li><img src="/assets/css.svg" alt="Css"></li>
-              <li><img src="/assets/js.svg" alt="Js"></li>
-              <li><img src="/assets/cpp.svg" alt="C"></li>
-              <li><img src="/assets/python.svg" alt="Python"></li>
-              <li><img src="/assets/java.svg" alt="Java"></li>
-              <li><img src="/assets/mysql.svg" alt="MySql"></li>
-              <li><img src="/assets/nodejs.svg" alt="Node.Js"></li>
-              <li><img src="/assets/mongodb.svg" alt="MongoDB"></li>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#perks">Achievements</a></li>
+                <li><button><a href="#contact-me">Contact me</a></button></li>
+                <li><img src="/assets/dark.svg" id="dark-toggle" alt="Dark Mode"></li>
             </ul>
-          </div>
 
-          <!-- Right side - Backend/Programming -->
-          <div class="skills-box b2 reveal reveal-right">
-            <h3>CS Fundamentals</h3>
+            <!-- Hamburger Icon (for mobile) -->
+            <img src="/assets/hamburger.svg" class="hamburger" id="hamburger" alt="Menu">
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobileMenu">
+            <img src="/assets/close.svg" id="closeMenu" class="close-icon" alt="Close">
             <ul>
-              <li>Data Structures & Algorithms</li>
-              <li>Object Oriented Programming</li>
-              <li>Operating System</li>
-              <li>Artificial Intelligence , Machine Learning</li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#perks">Achievements</a></li>
+                <li><button><a href="#contact-me">Contact me</a></button></li>
+                <li><img src="/assets/dark.svg" id="mobileDarkToggle" alt="Dark Mode"></li>
             </ul>
-          </div>
         </div>
-      </div>
-    </section><br>
-    <div class="partition"></div><br>
-    <section class="projects" id="projects">
-      <h1>Projects</h1>
-      <!-- Projects (put inside <section id="projects">) -->
-      <div class="projects-wrapper reveal">
-        <!-- Swiper container -->
-        <div class="swiper projects-swiper">
-          <div class="swiper-wrapper" id="projectsWrapper">
-            <!-- slides will be injected here by JS -->
-          </div>
+    </header>
 
-          <!-- navigation -->
-          <div class="swiper-button-prev prev"><img src="/assets/prv.svg" alt="">
-          </div>
-          <div class="swiper-button-next next"><img src="/assets/nxt.svg" alt=""></div>
+    <main>
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <!-- Left side -->
+                <div class="home-left reveal reveal-left">
+                    <h1 class="hero-title">
+                        Hello, I’m
+                        <span class="changing-text"></span>
+                    </h1>
+
+                    <p>
+                        I’m passionate about web development and love crafting clean, functional, and responsive
+                        websites that turn
+                        ideas into meaningful digital experiences..</p>
+                </div>
+
+                <!-- Right side -->
+                <div class="home-right reveal reveal-right">
+                    <img src="/assets/profile.jpg" alt="Subhasish Profile Picture">
+                </div>
+            </div>
+        </section><br>
+        <div class="partition"></div><br>
+        <!-- About -->
+        <section class="about" id="about">
+            <h1>About Me</h1>
+            <div class="about-content">
+                <!-- Left side -->
+                <div class="about-left reveal reveal-left">
+                    <div id="education" class="timeline active">
+
+                        <!-- EDUCATION TIMELINE -->
+                        <div id="education" class="timeline active">
+
+                            <div class="timeline-item">
+                                <span class="dot blue"></span>
+                                <div>
+                                    <h3>Tapsia Vidyasagar Sikshayatan (H.S)</h3>
+                                    <p>Secondary</p><span>2020</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="dot blue"></span>
+                                <div>
+                                    <h3>Tapsia Vidyasagar Sikshayatan (H.S)</h3>
+                                    <p>Higher Secondary</p><span>2022</span>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <span class="dot red"></span>
+                                <div>
+                                    <h3>MCKV Institute of Engineering</h3>
+                                    <p>B.Tech</p>
+                                    <span>Information Technology</span><span>2023-2027</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
 
 
-          <!-- pagination -->
-          <div class="swiper-pagination projects-pagination"></div>
-        </div>
-      </div>
-    </section><br>
-    <div class="partition"></div><br>
-    <section class="perks" id="perks">
-      <h1>Achievements & Certifications</h1>
+                    <div id="experience" class="timeline">
+                        <!-- EXPERIENCE TIMELINE -->
+                        <div id="experience" class="timeline">
 
-      <ol class="achievement-list reveal">
+                            <div class="timeline-item">
+                                <span class="dot blue"></span>
+                                <div>
+                                    <h4>IBM SkillsBuild Artificial Intelligence Internship</h4>
+                                    <p>Edunet</p><span>06/2025 – 07/2025</span>
+                                    <p>Remote</p>
+                                </div>
+                            </div>
 
-        <li class="achievement-item">
-          <div class="ach-title">
-            IBM SkillsBuild 6 Weeks Artificial Intelligence Internship
-            <span>Edunet</span>
-          </div>
-
-
-          <!-- View Icon Container (use your own SVG here) -->
-          <div class="ach-view">
-            <a href="certificates/AICET B2 PD Certificate-2824.pdf" target="_blank" title="View Certificate">
-              <img src="/assets/view.svg" alt="" srcset="">
-            </a>
-          </div>
-
-          <div class="ach-date">18/06/2025 - 30/07/2025</div>
-        </li>
-
-        <li class="achievement-item">
-          <div class="ach-title">
-            IBM SkillsBuild 6 Weeks Frontend Web Development Internship
-            <span>Edunet</span>
-          </div>
+                            <div class="timeline-item">
+                                <span class="dot blue"></span>
+                                <div>
+                                    <h4>Frontend Web Development Internship</h4>
+                                    <p>Edunet</p><span>08/2025 – 09/2025</span>
+                                    <p>Remote</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="dot red"></span>
+                                <div>
+                                    <h4>Microsoft Elevate Power Bi Internship</h4>
+                                    <p>Microsoft Elevate</p><span>02/2026 – 03/2026</span>
+                                    <p>Remote</p>
+                                </div>
+                            </div>
 
 
-          <div class="ach-view">
-            <a href="certificates/AICTE B3_PD_2001-3491-1011 (1).pdf" target="_blank" title="View Certificate">
-              <img src="/assets/view.svg" alt="">
-            </a>
-          </div>
+                        </div>
+                    </div>
 
-          <div class="ach-date"> 21/08/2025 - 30/09/2025</div>
-        </li>
+                </div>
+                <!-- Right side -->
+                <div class="about-right reveal reveal-right">
+                    <h2 style="text-align: center;">Hello, I'm Subhasish Nath</h2>
+                    <p>
+                        I'm currently a third-year B.Tech student specializing in Information Technology at MCKV
+                        Institute of Engineering. I am passionate about building user-friendly websites and
+                        applications, and I enjoy turning complex problems into simple, beautiful, and intuitive
+                        designs.
+                    </p>
+                    <p>
+                        I’m constantly learning and exploring new technologies to grow as a developer. My goal is to
+                        contribute to impactful projects while enhancing my skills in full-stack development with
+                        Responsive
+                        Websites and
+                        problem-solving.
+                    </p><br>
+                    <a href="/resume.pdf" download class="btn">Download Resume</a><br><br>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/subhasish-nath-a39193365/" target="_blank">
+                            <img src="/assets/linkedin.svg" alt="LinkedIn" srcset="">
+                        </a>
+                        <a href="https://github.com/subha7013" target="_blank">
+                            <img src="/assets/github.svg" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/s_ubha713" target="_blank">
+                            <img src="/assets/insta.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section><br>
+        <div class="partition"></div><br>
+        <section class="skills" id="skills">
+            <h1>Skills</h1>
+            <div class="skills-content">
+
+                <p>
+                    Here are some of the technologies and tools I work with to build fast, responsive, and user-friendly
+                    web
+                    experiences.
+                </p>
+
+                <div class="skills-grid">
+                    <!-- Left side - Frontend -->
+                    <div class="skills-box b1 reveal reveal-left">
+                        <h3>Programming Languages & Technologies</h3>
+                        <ul>
+                            <li><img src="/assets/html.svg" alt="Html"></li>
+                            <li><img src="/assets/css.svg" alt="Css"></li>
+                            <li><img src="/assets/js.svg" alt="Js"></li>
+                            <li><img src="/assets/cpp.svg" alt="C"></li>
+                            <li><img src="/assets/python.svg" alt="Python"></li>
+                            <li><img src="/assets/java.svg" alt="Java"></li>
+                            <li><img src="/assets/mysql.svg" alt="MySql"></li>
+                            <li><img src="/assets/nodejs.svg" alt="Node.Js"></li>
+                            <li><img src="/assets/mongodb.svg" alt="MongoDB"></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right side - Backend/Programming -->
+                    <div class="skills-box b2 reveal reveal-right">
+                        <h3>CS Fundamentals</h3>
+                        <ul>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Object Oriented Programming</li>
+                            <li>Operating System</li>
+                            <li>Artificial Intelligence , Machine Learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section><br>
+        <div class="partition"></div><br>
+        <section class="projects" id="projects">
+            <h1>Projects</h1>
+            <!-- Projects (put inside <section id="projects">) -->
+            <div class="projects-wrapper reveal">
+                <!-- Swiper container -->
+                <div class="swiper projects-swiper">
+                    <div class="swiper-wrapper" id="projectsWrapper">
+                        <!-- slides will be injected here by JS -->
+                    </div>
+
+                    <!-- navigation -->
+                    <div class="swiper-button-prev prev"><img src="/assets/prv.svg" alt="">
+                    </div>
+                    <div class="swiper-button-next next"><img src="/assets/nxt.svg" alt=""></div>
+
+
+                    <!-- pagination -->
+                    <div class="swiper-pagination projects-pagination"></div>
+                </div>
+            </div>
+        </section><br>
+        <div class="partition"></div><br>
+        <section class="perks" id="perks">
+            <h1>Achievements & Certifications</h1>
+
+            <ol class="achievement-list reveal">
 
                 <li class="achievement-item">
-          <div class="ach-title">
-            MS Elevate Mirosoft Copilot
-            <span>FICE</span>
-          </div>
+                    <div class="ach-title">
+                        IBM SkillsBuild 6 Weeks Artificial Intelligence Internship
+                        <span>Edunet</span>
+                    </div>
 
 
-          <div class="ach-view">
-            <a href="certificates/ms-elevate_copilot.pdf" target="_blank" title="View Certificate">
-              <img src="/assets/view.svg" alt="">
-            </a>
-          </div>
+                    <!-- View Icon Container (use your own SVG here) -->
+                    <div class="ach-view">
+                        <a href="certificates/AICET B2 PD Certificate-2824.pdf" target="_blank"
+                            title="View Certificate">
+                            <img src="/assets/view.svg" alt="" srcset="">
+                        </a>
+                    </div>
 
-          <div class="ach-date"> January 2026</div>
-        </li>
+                    <div class="ach-date">18/06/2025 - 30/07/2025</div>
+                </li>
 
-      </ol>
-    </section>
-    <br>
+                <li class="achievement-item">
+                    <div class="ach-title">
+                        IBM SkillsBuild 6 Weeks Frontend Web Development Internship
+                        <span>Edunet</span>
+                    </div>
 
-    <div class="partition"></div><br>
-    <section id="contact-me" class="contact reveal">
-      <h1>Contact Me</h1>
-      <p>If you have anything query you can send message in the following form.</p><br><br>
-      <form id="contactForm">
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
-        <input type="email" id="email" name="email" placeholder="Your Email" required />
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="msg">Send Message</button>
-      </form>
-      <p id="formStatus" style="margin-top: 10px;"></p>
-    </section><br>
-    <div class="partition"></div><br>
-  </main>
-  <footer>
-    <p>Copyright © Subhasish || All rights reserved || Made with ❤️ || 2025</p>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
+
+                    <div class="ach-view">
+                        <a href="certificates/AICTE B3_PD_2001-3491-1011 (1).pdf" target="_blank"
+                            title="View Certificate">
+                            <img src="/assets/view.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="ach-date"> 21/08/2025 - 30/09/2025</div>
+                </li>
+
+                <li class="achievement-item">
+                    <div class="ach-title">
+                        MS Elevate Mirosoft Copilot
+                        <span>FICE</span>
+                    </div>
+
+
+                    <div class="ach-view">
+                        <a href="certificates/ms-elevate_copilot.pdf" target="_blank" title="View Certificate">
+                            <img src="/assets/view.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="ach-date"> January 2026</div>
+                </li>
+
+            </ol>
+        </section>
+        <br>
+
+        <div class="partition"></div><br>
+        <section id="contact-me" class="contact reveal">
+            <h1>Contact Me</h1>
+            <p>If you have anything query you can send message in the following form.</p><br><br>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="msg">Send Message</button>
+            </form>
+            <p id="formStatus" style="margin-top: 10px;"></p>
+        </section><br>
+        <div class="partition"></div><br>
+    </main>
+    <footer>
+        <p>Copyright © Subhasish || All rights reserved || Made with ❤️ || 2025</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
