@@ -150,23 +150,23 @@ async function loadProjectsAndInitSwiper() {
       slide.innerHTML = `
 <div class="project-structure">
 
-    <div class="project-image reveal-left">
+    <div class="project-image">
         <img src="${p.image}" alt="${p.title}">
     </div>
 
-    <div class="project-info reveal-right">
+    <div class="project-info">
 
         <h2>${p.title}</h2>
 
-        <p class="project-desc reveal-right">
+        <p class="project-desc">
             <strong>Description:</strong> ${p.description}
         </p>
 
-        <div class="tech-stack reveal-right">
+        <div class="tech-stack">
             ${techHTML}
         </div>
 
-        <div class="project-buttons reveal-left">
+        <div class="project-buttons">
             <a class="live" href="${p.live}" target="_blank">Live Demo</a>
             <a class="code" href="${p.github}" target="_blank">GitHub</a>
         </div>
@@ -298,7 +298,6 @@ document.addEventListener("click", function (e) {
     }, 450); // ← perfect UX delay
   }
 });
-
 
 
 
