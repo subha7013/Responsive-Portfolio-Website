@@ -150,23 +150,23 @@ async function loadProjectsAndInitSwiper() {
       slide.innerHTML = `
 <div class="project-structure">
 
-    <div class="project-image">
+    <div class="project-image reveal-left">
         <img src="${p.image}" alt="${p.title}">
     </div>
 
-    <div class="project-info">
+    <div class="project-info reveal-right">
 
         <h2>${p.title}</h2>
 
-        <p class="project-desc">
+        <p class="project-desc reveal-right">
             <strong>Description:</strong> ${p.description}
         </p>
 
-        <div class="tech-stack">
+        <div class="tech-stack reveal-right">
             ${techHTML}
         </div>
 
-        <div class="project-buttons">
+        <div class="project-buttons reveal-left">
             <a class="live" href="${p.live}" target="_blank">Live Demo</a>
             <a class="code" href="${p.github}" target="_blank">GitHub</a>
         </div>
