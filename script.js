@@ -14,21 +14,21 @@ window.hideLoader = () => {
   document.getElementById("global-loader")?.classList.add("hidden");
 };
 
-function showTimeline(tab,index){
+function showTimeline(tab, index) {
 
-const timelines=document.querySelectorAll(".timeline");
-const buttons=document.querySelectorAll(".tab-btn");
-const underline=document.querySelector(".tab-underline");
+  const timelines = document.querySelectorAll(".timeline");
+  const buttons = document.querySelectorAll(".tab-btn");
+  const underline = document.querySelector(".tab-underline");
 
-timelines.forEach(t=>t.style.display="none");
-buttons.forEach(b=>b.classList.remove("active"));
+  timelines.forEach(t => t.style.display = "none");
+  buttons.forEach(b => b.classList.remove("active"));
 
-document.getElementById(tab).style.display="block";
-buttons[index].classList.add("active");
+  document.getElementById(tab).style.display = "block";
+  buttons[index].classList.add("active");
 
-/* move underline */
+  /* move underline */
 
-underline.style.transform=`translateX(${index*150}px)`;
+  underline.style.transform = `translateX(${index * 150}px)`;
 
 }
 /* ===============================
@@ -63,23 +63,23 @@ document.querySelectorAll(".ach-view a img").forEach(link => {
 });
 
 const words = ["Subhasish", "Developer", "Engineer"];
-  let index = 0;
-  const textElement = document.querySelector(".changing-text");
+let index = 0;
+const textElement = document.querySelector(".changing-text");
 
-  function changeText() {
-    textElement.style.opacity = 0;
-    textElement.style.transform = "translateY(-5px)";
+function changeText() {
+  textElement.style.opacity = 0;
+  textElement.style.transform = "translateY(-5px)";
 
-    setTimeout(() => {
-      textElement.textContent = words[index];
-      textElement.style.opacity = 1;
-      textElement.style.transform = "translateY(0)";
-      index = (index + 1) % words.length;
-    }, 500);
-  }
+  setTimeout(() => {
+    textElement.textContent = words[index];
+    textElement.style.opacity = 1;
+    textElement.style.transform = "translateY(0)";
+    index = (index + 1) % words.length;
+  }, 500);
+}
 
-  changeText();               // initial call
-  setInterval(changeText, 2000);
+changeText();               // initial call
+setInterval(changeText, 2000);
 // Scroll Reveal Animation
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -138,27 +138,43 @@ async function loadProjectsAndInitSwiper() {
   try {
     const resp = await fetch('projects.json', { cache: "no-store" });
     if (!resp.ok) throw new Error('Failed to load projects.json');
-    
+
     const projects = await resp.json();
     const wrapper = document.getElementById('projectsWrapper');
     wrapper.innerHTML = '';
 
     projects.forEach((p) => {
-      const techHTML = (p.tech || []).map(t => `<span class="tech-badge">${t}</span>`).join('');
+      const techHTML = (p.tech || []).map(t => `<span>${t}</span>`).join('');
       const slide = document.createElement('div');
       slide.className = 'swiper-slide';
       slide.innerHTML = `
-        <div class="project-card">
-          <img class="thumb" src="${p.image}" alt="${p.title}">
-          <h3>${p.title}</h3>
-          <p>${p.description}</p>
-          <div class="tech-list">${techHTML}</div>
-          <div class="project-links">
-            <a class="live" href="${p.live}" target="_blank" rel="noopener">Live Demo</a>
-            <a class="code" href="${p.github}" target="_blank" rel="noopener">GitHub</a>
-          </div>
+<div class="project-structure">
+
+    <div class="project-image">
+        <img src="${p.image}" alt="${p.title}">
+    </div>
+
+    <div class="project-info">
+
+        <h2>${p.title}</h2>
+
+        <p class="project-desc">
+            <strong>Description:</strong> ${p.description}
+        </p>
+
+        <div class="tech-stack">
+            ${techHTML}
         </div>
-      `;
+
+        <div class="project-buttons">
+            <a class="live" href="${p.live}" target="_blank">Live Demo</a>
+            <a class="code" href="${p.github}" target="_blank">GitHub</a>
+        </div>
+
+    </div>
+
+</div>
+`;
       wrapper.appendChild(slide);
     });
 
@@ -246,43 +262,43 @@ document.getElementById("contactForm").addEventListener("submit", async function
    SMART LOADER NAVIGATION HANDLER
    =============================== */
 
-   document.addEventListener("click", function (e) {
-    const link = e.target.closest("a");
-    if (!link) return;
-  
-    const isDownload = link.hasAttribute("download");
-    const isProject =
-      link.classList.contains("live") ||
-      link.classList.contains("code");
-    const isCertificate = link.closest(".ach-view");
-  
-    if (isDownload || isProject || isCertificate) {
-      e.preventDefault(); // ⛔ stop instant navigation
-  
-      const href = link.href;
-      const target = link.target || "_self";
-  
-      // show loader FIRST
-      showLoader(
-        isDownload
-          ? "Downloading resume..."
-          : isCertificate
+document.addEventListener("click", function (e) {
+  const link = e.target.closest("a");
+  if (!link) return;
+
+  const isDownload = link.hasAttribute("download");
+  const isProject =
+    link.classList.contains("live") ||
+    link.classList.contains("code");
+  const isCertificate = link.closest(".ach-view");
+
+  if (isDownload || isProject || isCertificate) {
+    e.preventDefault(); // ⛔ stop instant navigation
+
+    const href = link.href;
+    const target = link.target || "_self";
+
+    // show loader FIRST
+    showLoader(
+      isDownload
+        ? "Downloading resume..."
+        : isCertificate
           ? "Opening certificate..."
           : "Opening project..."
-      );
-  
-      // open after loader is visible
-      setTimeout(() => {
-        if (target === "_blank") {
-          window.open(href, "_blank", "noopener");
-        } else {
-          window.location.href = href;
-        }
-        hideLoader();
-      }, 450); // ← perfect UX delay
-    }
-  });
-  
+    );
+
+    // open after loader is visible
+    setTimeout(() => {
+      if (target === "_blank") {
+        window.open(href, "_blank", "noopener");
+      } else {
+        window.location.href = href;
+      }
+      hideLoader();
+    }, 450); // ← perfect UX delay
+  }
+});
+
 
 
 
