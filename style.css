@@ -1075,6 +1075,10 @@ footer p {
     padding-left: 0;
     padding-right: 0;
   }
+  header{
+            width: 96vw;
+        margin-left: 13px;
+  }
 
   .home-content,
   .about-content {
@@ -1369,3 +1373,4 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
