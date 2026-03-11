@@ -871,7 +871,7 @@ body.dark-mode .project-buttons .code:hover {
 }
 
 .project-right {
-  flex: 1.2;
+  flex: 2.2;
 }
 
 .project-right h2 {
@@ -1311,8 +1311,8 @@ footer p {
   }
 
   .project-preview {
-    width: 75%;
-    height: 30vh;
+    width: 100%;
+    height: 35vh;
   }
 
   .project-desc {
@@ -1534,3 +1534,4 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
