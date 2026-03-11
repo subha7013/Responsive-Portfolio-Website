@@ -370,7 +370,7 @@ section.contact {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding-left: 90px;
+  text-align: center;
 }
 
 .about h1 {
@@ -1535,5 +1535,6 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
