@@ -1309,6 +1309,8 @@ footer p {
     width: 100%;
     flex-direction: column;
     text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
   }
 
   .project-preview {
@@ -1539,6 +1541,7 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
 
