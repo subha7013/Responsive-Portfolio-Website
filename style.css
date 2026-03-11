@@ -212,19 +212,20 @@ nav button {
   border: none;
   padding: 8px 23px;
   font-size: 14px;
-  color: white;
   background-color: red;
   font-weight: bold;
   border-radius: 10px;
 }
-
+nav ul li button a{
+  color: rgb(238, 221, 221);
+}
 
 
 nav button:hover {
   transform: scale(1.09);
   cursor: pointer;
-  background-color: white;
-  color: red;
+  background-color: rgb(27, 206, 66);
+  color: rgb(255, 255, 255);
 }
 
 /* Hamburger (mobile) */
@@ -246,7 +247,7 @@ nav button:hover {
   right: 0;
   width: 100%;
   height: 55vh;
-  background-color: rgba(68, 74, 74, 0.95);
+  background-color: rgb(71 162 162 / 95%);
   z-index: 1000;
   flex-direction: column;
   justify-content: center;
@@ -304,6 +305,10 @@ nav button:hover {
   width: 45px;
   height: 35px;
   filter: invert(1);
+}
+
+body.dark-mode .mobile-menu{
+  background-color: #302e2e;
 }
 
 .close-icon {
@@ -507,6 +512,10 @@ section.contact {
 
 .about-right {
   padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .about-right h2 {
@@ -673,8 +682,8 @@ body.dark-mode .skills-box ul li {
 }
 
 .b1 {
-  width: 100%;
-  height: 29vh;
+  width: 55%;
+  height: 35vh;
 }
 
 .b1 ul {
@@ -721,125 +730,229 @@ body.dark-mode .skills-box ul li {
 
 
 
-/* Projects section styles */
-.projects-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
+/* Projects section */
 
-.projects-swiper {
-  padding-bottom: 60px;
-  position: relative;
-}
-
-
-/* Slide card */
 .project-card {
   display: flex;
-  flex-direction: column;
-  gap: 13px;
-  background: #faf9f9;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  padding: 18px;
-  min-height: 420px;
-  align-items: stretch;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 1200vw;
+  height: 70vh;
+  background: #fff;
+  padding-right: 230px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* image */
-.project-card .thumb {
-  width: 100%;
-  height: 20vh;
-  object-fit: cover;
-  border-radius: 8px;
-  background: #f2f2f2;
-}
-
-.projects h1 {
-  text-align: center;
-}
-
-/* content */
-.project-card h3 {
-  margin: 8px 0 6px;
-  font-size: 1.15rem;
-}
-
-.project-card p {
-  font-size: 0.95rem;
-  color: #444;
+.project-left {
   flex: 1;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-
-/* tech badges */
-.tech-list {
-  margin-top: 8px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  justify-content: center;
 }
 
-.tech-badge {
-  font-size: 18px;
-  padding: 8px 21px;
-  border-radius: 11px;
-  background: rgb(132 217 206);
-  color: #000000;
-  font-weight: bolder;
+.project-preview {
+  width: 100%;
+  height: 30vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-left: 120px;
 }
 
-/* links */
-.project-buttons a{
+.project-right {
+  margin-right: 70px;
+}
+
+.project-right h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.project-desc {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+.project-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.project-buttons a {
   text-decoration: none;
   color: white;
   font-weight: bolder;
   padding: 10px;
   border-radius: 10px;
 }
-.project-buttons .live{
-    background-color: red;
+
+.project-buttons .live {
+  background-color: red;
 }
-.project-buttons .live:hover{
+
+.project-buttons .live:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
   background-color: #838e99;
 }
-.project-buttons .code{
-    background-color: rgba(73, 203, 47, 0.998);
+
+.project-buttons .code {
+  background-color: rgba(73, 203, 47, 0.998);
 }
-.project-buttons .code:hover{
+
+.project-buttons .code:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
   background-color: #838e99;
 }
-body.dark-mode .project-buttons .live{
+
+body.dark-mode .project-buttons .live {
   background-color: yellow;
   color: rgb(23, 22, 22);
 }
-body.dark-mode .project-buttons .live:hover{
+
+body.dark-mode .project-buttons .live:hover {
   background-color: rgb(236, 7, 7);
   color: rgb(255, 255, 255);
 }
-body.dark-mode .project-buttons .code{
+
+body.dark-mode .project-buttons .code {
   background-color: rgb(255, 255, 255);
   color: rgb(20, 6, 81);
 }
-body.dark-mode .project-buttons .code:hover{
+
+body.dark-mode .project-buttons .code:hover {
   background-color: rgb(95, 243, 95);
   color: rgb(255, 255, 255);
 }
-/* Swiper navigation overrides (optional look) */
-/* Hide Swiper's built-in arrow icons */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  display: none;
+
+
+.projects-swiper {
+  padding-bottom: 60px;
+  position: relative;
 }
 
+/* Wrapper spacing */
+.projects-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Swiper slide center alignment */
+.swiper-slide {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card styling */
+.project-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.project-preview {
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.project-right {
+  flex: 1.2;
+}
+
+.project-right h2 {
+  margin-bottom: 12px;
+}
+
+.project-desc {
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tech-stack span {
+  background: #0b2545;
+  color: #00aaff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 70px;
+  border: 1px solid #2b5b6b;
+  background: #c9dce4;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+  left: -60px;
+}
+
+.swiper-button-next {
+  right: -60px;
+}
+
+.swiper-button-prev img,
+.swiper-button-next img {
+  width: 18px;
+}
+
+.projects-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #bbb;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1976d2;
+}
+
+.projects h1 {
+  text-align: center;
+}
+
+
+/* Swiper navigation overrides (optional look) */
+/* Hide Swiper's built-in arrow icons */
+/* .swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+} */
+
 /* Optional: remove default button background/shape */
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
   width: auto;
   height: auto;
@@ -859,7 +972,7 @@ body.dark-mode .swiper-button-prev {
 .swiper-button-prev img,
 .swiper-button-next img {
   margin-bottom: 85px;
-}
+} */
 
 .swiper-pagination-bullet {
   background: #8d8989;
@@ -874,17 +987,15 @@ body.dark-mode .project-card {
   background-color: #2e2d2d90;
 }
 
-body.dark-mode .project-card p {
-  color: white;
-}
 
-.project-card .live:hover {
+
+.project-structure .live:hover {
   color: blue;
   background-color: rgb(245, 238, 238);
   border: 2px solid rgb(241, 223, 223);
 }
 
-.project-card .code:hover {
+.project-structure .code:hover {
   color: white;
   background-color: #1f1f1f;
 }
@@ -1089,9 +1200,10 @@ footer p {
     padding-left: 0;
     padding-right: 0;
   }
-  header{
-            width: 96vw;
-        margin-left: 13px;
+
+  header {
+    width: 96vw;
+    margin-left: 13px;
   }
 
   .home-content,
@@ -1154,14 +1266,6 @@ footer p {
     padding-top: 20px;
   }
 
-  .project-card {
-    min-height: 420px;
-  }
-
-  .project-card .img {
-    height: 220px;
-  }
-
   .contact {
     padding: 40px 20px;
   }
@@ -1194,6 +1298,49 @@ footer p {
     color: #555;
     max-width: 350px;
   }
+
+  .project-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 70vh;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-preview {
+    width: 75%;
+    height: 30vh;
+  }
+
+  .project-desc {
+    text-align: center;
+  }
+
+  .project-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .tech-stack span {
+    background: #b7cce5;
+    color: #031823;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
 }
 
 
@@ -1387,6 +1534,3 @@ TIMELINE
     transform: translateY(0);
   }
 }
-
-
-
