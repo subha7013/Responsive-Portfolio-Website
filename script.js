@@ -133,7 +133,6 @@ closeMenu.addEventListener('click', () => {
   mobileMenu.classList.remove('active');
 });
 
-// Load Projects (Swiper)
 async function loadProjectsAndInitSwiper() {
   try {
     const resp = await fetch('projects.json', { cache: "no-store" });
@@ -144,37 +143,48 @@ async function loadProjectsAndInitSwiper() {
     wrapper.innerHTML = '';
 
     projects.forEach((p) => {
-      const techHTML = (p.tech || []).map(t => `<span>${t}</span>`).join('');
+
+      const techHTML = (p.tech || [])
+      .map(t => `<span class="tech-badge">${t}</span>`)
+      .join('');
+
       const slide = document.createElement('div');
       slide.className = 'swiper-slide';
+
       slide.innerHTML = `
-<div class="project-structure">
 
-    <div class="project-image">
-        <img src="${p.image}" alt="${p.title}">
-    </div>
+<div class="project-card">
 
-    <div class="project-info">
+  <div class="project-left reveal-left">
 
-        <h2>${p.title}</h2>
+      <img src="${p.image}" alt="${p.title}" class="project-preview">
 
-        <p class="project-desc">
-            <strong>Description:</strong> ${p.description}
-        </p>
+  </div>
 
-        <div class="tech-stack">
-            ${techHTML}
-        </div>
 
-        <div class="project-buttons">
-            <a class="live" href="${p.live}" target="_blank">Live Demo</a>
-            <a class="code" href="${p.github}" target="_blank">GitHub</a>
-        </div>
+  <div class="project-right reveal-right">
 
-    </div>
+      <h2>${p.title}</h2>
+
+      <p class="project-desc">
+          <strong>Description:</strong> ${p.description}
+      </p>
+
+      <div class="tech-stack">
+          ${techHTML}
+      </div>
+
+      <div class="project-buttons">
+          <a class="live" href="${p.live}" target="_blank">Live Demo</a>
+          <a class="code" href="${p.github}" target="_blank">GitHub</a>
+      </div>
+
+  </div>
 
 </div>
+
 `;
+
       wrapper.appendChild(slide);
     });
 
@@ -298,6 +308,7 @@ document.addEventListener("click", function (e) {
     }, 450); // ← perfect UX delay
   }
 });
+
 
 
 
