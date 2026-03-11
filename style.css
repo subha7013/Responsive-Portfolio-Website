@@ -792,31 +792,48 @@ body.dark-mode .skills-box ul li {
 }
 
 /* links */
-.project-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.project-links a {
+.project-buttons a{
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-weight: 600;
-  border: 1px solid transparent;
-}
-
-.project-links a.live {
-  background: #007bff;
   color: white;
+  font-weight: bolder;
+  padding: 10px;
+  border-radius: 10px;
+    display: flex;
+  gap: 12px;
+  margin-top: 12px
 }
-
-.project-links a.code {
-  background: transparent;
-  color: #333;
-  border: 2px solid #ddd;
+.project-buttons .live{
+    background-color: red;
 }
-
+.project-buttons .live:hover{
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  background-color: #838e99;
+}
+.project-buttons .code{
+    background-color: rgba(73, 203, 47, 0.998);
+}
+.project-buttons .code:hover{
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  background-color: #838e99;
+}
+body.dark-mode .project-buttons .live{
+  background-color: yellow;
+  color: rgb(23, 22, 22);
+}
+body.dark-mode .project-buttons .live:hover{
+  background-color: rgb(236, 7, 7);
+  color: rgb(255, 255, 255);
+}
+body.dark-mode .project-buttons .code{
+  background-color: rgb(255, 255, 255);
+  color: rgb(20, 6, 81);
+}
+body.dark-mode .project-buttons .code:hover{
+  background-color: rgb(95, 243, 95);
+  color: rgb(255, 255, 255);
+}
 /* Swiper navigation overrides (optional look) */
 /* Hide Swiper's built-in arrow icons */
 .swiper-button-prev::after,
@@ -1373,4 +1390,5 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
