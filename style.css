@@ -370,6 +370,7 @@ section.contact {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding-left: 90px;
 }
 
 .about h1 {
@@ -946,13 +947,13 @@ body.dark-mode .project-buttons .code:hover {
 
 /* Swiper navigation overrides (optional look) */
 /* Hide Swiper's built-in arrow icons */
-/* .swiper-button-prev::after,
+.swiper-button-prev::after,
 .swiper-button-next::after {
   display: none;
-} */
+}
 
 /* Optional: remove default button background/shape */
-/* .swiper-button-next,
+.swiper-button-next,
 .swiper-button-prev {
   width: auto;
   height: auto;
@@ -972,7 +973,7 @@ body.dark-mode .swiper-button-prev {
 .swiper-button-prev img,
 .swiper-button-next img {
   margin-bottom: 85px;
-} */
+}
 
 .swiper-pagination-bullet {
   background: #8d8989;
@@ -1534,4 +1535,5 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
