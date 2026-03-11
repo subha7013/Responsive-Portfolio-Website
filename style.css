@@ -1305,7 +1305,7 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 75vh;
+    height: 85vh;
     width: 100%;
     flex-direction: column;
     text-align: center;
@@ -1539,6 +1539,7 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
 
