@@ -1305,12 +1305,12 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 85vh;
+    height: 130vh;
     width: 100%;
     flex-direction: column;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 80px;
   }
 
   .project-preview {
@@ -1541,6 +1541,7 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
 
