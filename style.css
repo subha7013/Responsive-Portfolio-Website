@@ -798,9 +798,6 @@ body.dark-mode .skills-box ul li {
   font-weight: bolder;
   padding: 10px;
   border-radius: 10px;
-    display: flex;
-  gap: 12px;
-  margin-top: 12px
 }
 .project-buttons .live{
     background-color: red;
@@ -1161,7 +1158,7 @@ footer p {
     min-height: 420px;
   }
 
-  .project-card .thumb {
+  .project-card .img {
     height: 220px;
   }
 
@@ -1390,5 +1387,6 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
