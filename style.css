@@ -1304,11 +1304,9 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 130vh;
+    height: 132vh;
     width: 100%;
     flex-direction: column;
-    text-align: center;
     padding-top: 30px;
     padding-bottom: 80px;
   }
@@ -1323,7 +1321,7 @@ footer p {
   }
     .project-right{
     width: 100%;
-      text-align: center;
+    text-align: center;
   }
 
   .project-buttons {
@@ -1541,6 +1539,7 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
 
