@@ -120,9 +120,10 @@ body.dark-mode .btn {
   color: white;
 }
 
-body.dark-mode .contactForm .msg {
-  background-color: #4f4141;
+body.dark-mode #contactForm .msg {
+  background-color: #ddeb1e;
   font-weight: bolder;
+  color: #04182d;
 }
 
 body.dark-mode .btn:hover {
@@ -1539,6 +1540,7 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
 
