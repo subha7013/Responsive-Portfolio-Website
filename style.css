@@ -384,7 +384,7 @@ section.contact {
 }
 
 .about-left {
-  margin-left: 12vw;
+  margin-left: 10vw;
 }
 
 .home-left {
@@ -1539,6 +1539,7 @@ TIMELINE
     transform: translateY(0);
   }
 }
+
 
 
 
