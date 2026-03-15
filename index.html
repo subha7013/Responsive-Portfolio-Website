@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Subhasish N</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,60 +13,88 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+
 </head>
 
 <body>
+
+    <!-- ================= LOADER ================= -->
 
     <div id="global-loader">
         <div class="g-loader"></div>
     </div>
 
-    <img src="/assets/top.svg" id="topBtn" alt="">
+    <img src="/assets/top.svg" id="topBtn" alt="Scroll to top">
+
+    <!-- ================= HEADER ================= -->
 
     <header>
 
         <nav>
 
             <div class="nav-logo">
-                <img src="logo.png" width="120" height="60" alt="logo.svg">
+                <img src="logo.png" width="120" height="60" alt="logo">
             </div>
 
             <ul class="nav-links">
+
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#perks">Achievements</a></li>
-                <li><button><a href="#contact-me">Contact me</a></button></li>
-                <li><img src="/assets/dark.svg" id="dark-toggle" alt="Dark Mode"></li>
+                <li><a href="#contact-me">Contact</a></li>
+
+                <li>
+                    <button>
+                        <a href="#contact-me">Contact me</a>
+                    </button>
+                </li>
+
+                <li>
+                    <img src="/assets/dark.svg" id="dark-toggle" alt="Dark Mode">
+                </li>
+
             </ul>
 
             <img src="/assets/hamburger.svg" class="hamburger" id="hamburger" alt="Menu">
 
         </nav>
 
+        <!-- ===== Mobile Menu ===== -->
 
         <div class="mobile-menu" id="mobileMenu">
 
             <img src="/assets/close.svg" id="closeMenu" class="close-icon" alt="Close">
 
             <ul>
+
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#perks">Achievements</a></li>
-                <li><button><a href="#contact-me">Contact me</a></button></li>
-                <li><img src="/assets/dark.svg" id="mobileDarkToggle" alt="Dark Mode"></li>
+                <li><a href="#contact-me">Contact</a></li>
+
+                <li>
+                    <button>
+                        <a href="#contact-me">Contact me</a>
+                    </button>
+                </li>
+
+                <li>
+                    <img src="/assets/dark.svg" id="mobileDarkToggle" alt="Dark Mode">
+                </li>
+
             </ul>
 
         </div>
 
     </header>
 
+    <!-- ================= MAIN ================= -->
+
     <main>
 
-        <!-- HOME -->
+        <!-- ================= HOME ================= -->
 
         <section class="home" id="home">
 
@@ -85,9 +115,10 @@
 
                 </div>
 
-
                 <div class="home-right reveal reveal-right">
-                    <img src="/assets/profile.jpg" alt="Subhasish Profile Picture">
+
+                    <img src="/assets/profile.png" alt="Subhasish Profile Picture">
+
                 </div>
 
             </div>
@@ -98,8 +129,7 @@
         <div class="partition"></div>
         <br>
 
-
-        <!-- ABOUT -->
+        <!-- ================= ABOUT ================= -->
 
         <section class="about" id="about">
 
@@ -107,25 +137,21 @@
 
             <div class="about-content">
 
-                <!-- LEFT SIDE -->
-
                 <div class="about-left reveal reveal-left">
-
 
                     <div class="timeline-tabs">
 
                         <button class="tab-btn active" onclick="showTimeline('education',0)">
-                            Education
-                        </button>
+                            Education </button>
 
                         <button class="tab-btn" onclick="showTimeline('experience',1)">
-                            Experience
-                        </button>
+                            Experience </button>
 
                         <div class="tab-underline"></div>
 
                     </div>
 
+                    <!-- Education -->
 
                     <div id="education" class="timeline active">
 
@@ -134,35 +160,31 @@
                             <div>
                                 <h3>Tapsia Vidyasagar Sikshayatan (H.S)</h3>
                                 <p>Secondary</p>
-                                <p>88.42%</p>
                                 <span>2020</span>
                             </div>
                         </div>
-
 
                         <div class="timeline-item">
                             <span class="dot blue"></span>
                             <div>
                                 <h3>Tapsia Vidyasagar Sikshayatan (H.S)</h3>
                                 <p>Higher Secondary</p>
-                                <p>90%</p>
                                 <span>2022</span>
                             </div>
                         </div>
-
 
                         <div class="timeline-item">
                             <span class="dot red"></span>
                             <div>
                                 <h3>MCKV Institute of Engineering</h3>
                                 <p>B.Tech – Information Technology</p>
-                                <p>9.1 cgpa(till 5th Sem)</p>
                                 <span>2023–2027</span>
                             </div>
                         </div>
 
                     </div>
 
+                    <!-- Experience -->
 
                     <div id="experience" class="timeline">
 
@@ -178,7 +200,6 @@
                             </div>
                         </div>
 
-
                         <div class="timeline-item">
                             <span class="dot blue"></span>
                             <div>
@@ -190,7 +211,6 @@
                                 <span>08/2025 – 09/2025</span>
                             </div>
                         </div>
-
 
                         <div class="timeline-item">
                             <span class="dot red"></span>
@@ -208,37 +228,30 @@
 
                 </div>
 
-
-                <!-- RIGHT SIDE -->
-
                 <div class="about-right reveal reveal-right">
 
-                    <h2 style="text-align:center;">Hello, I'm Subhasish Nath</h2>
+                    <h2>Hello, I'm Subhasish Nath</h2>
 
                     <p>
                         I'm currently a third-year B.Tech student specializing in
                         Information Technology at MCKV Institute of Engineering.
-                        I am passionate about building user-friendly websites
-                        and applications.
-                        I’m constantly learning and exploring new technologies
-                        to grow as a developer. My goal is to contribute to
-                        impactful projects while enhancing my skills.
+                        I enjoy building modern web applications and learning
+                        new technologies.
                     </p>
-                    <a href="/resume.pdf" download class="btn" alt="failed to download">Download Resume</a>
+
+                    <a href="/resume.pdf" download class="btn">
+                        Download Resume
+                    </a>
+
                     <br>
+
                     <div class="social-icons">
 
-                        <a href="https://www.linkedin.com/in/subhasish-nath-a39193365/" target="_blank">
-                            <img src="/assets/linkedin.svg" alt="LinkedIn">
-                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank"> <img src="/assets/linkedin.svg"> </a>
 
-                        <a href="https://github.com/subha7013" target="_blank">
-                            <img src="/assets/github.svg" alt="GitHub">
-                        </a>
+                        <a href="https://github.com/" target="_blank"> <img src="/assets/github.svg"> </a>
 
-                        <a href="https://www.instagram.com/s_ubha713" target="_blank">
-                            <img src="/assets/insta.svg" alt="Instagram">
-                        </a>
+                        <a href="https://instagram.com/" target="_blank"> <img src="/assets/insta.svg"> </a>
 
                     </div>
 
@@ -248,13 +261,11 @@
 
         </section>
 
-
         <br>
         <div class="partition"></div>
         <br>
 
-
-        <!-- SKILLS -->
+        <!-- ================= SKILLS ================= -->
 
         <section class="skills" id="skills">
 
@@ -263,25 +274,23 @@
             <div class="skills-content">
 
                 <p>
-                    Here are some of the technologies and tools I work with to build
-                    fast, responsive, and user-friendly web experiences.
+                    Here are the technologies and tools I use to build
+                    modern web applications.
                 </p>
 
                 <div class="skills-grid">
 
                     <div class="skills-box b1 reveal reveal-left">
 
-                        <h3>Programming Languages & Technologies</h3>
+                        <h3>Programming Languages</h3>
 
                         <ul>
 
                             <li><img src="/assets/html.svg"></li>
                             <li><img src="/assets/css.svg"></li>
                             <li><img src="/assets/js.svg"></li>
-                            <li><img src="/assets/cpp.svg"></li>
                             <li><img src="/assets/python.svg"></li>
                             <li><img src="/assets/java.svg"></li>
-                            <li><img src="/assets/mysql.svg"></li>
                             <li><img src="/assets/nodejs.svg"></li>
                             <li><img src="/assets/mongodb.svg"></li>
 
@@ -289,16 +298,17 @@
 
                     </div>
 
-
                     <div class="skills-box b2 reveal reveal-right">
 
                         <h3>CS Fundamentals</h3>
 
                         <ul>
+
                             <li>Data Structures & Algorithms</li>
                             <li>Object Oriented Programming</li>
-                            <li>Operating System</li>
-                            <li>Artificial Intelligence , Machine Learning</li>
+                            <li>Operating Systems</li>
+                            <li>Machine Learning</li>
+
                         </ul>
 
                     </div>
@@ -309,38 +319,18 @@
 
         </section>
 
-
         <br>
         <div class="partition"></div>
         <br>
 
-
-        <!-- PROJECTS -->
+        <!-- ================= PROJECTS ================= -->
 
         <section class="projects" id="projects">
 
-            <h1>Projects</h1>
+            <h1 style="text-align: center;">Projects</h1>
             <p>Discover my projects, where creativity meets innovation</p>
 
-            <div class="projects-wrapper">
-
-                <div class="swiper projects-swiper">
-
-                    <div class="swiper-wrapper reveal" id="projectsWrapper"></div>
-
-                    <div class="swiper-button-prev prev">
-                        <img src="/assets/prv.svg">
-                    </div>
-
-                    <div class="swiper-button-next next">
-                        <img src="/assets/nxt.svg">
-                    </div>
-
-                    <div class="swiper-pagination projects-pagination"></div>
-
-                </div>
-
-            </div>
+            <div class="projects-grid" id="projectsWrapper"></div>
 
         </section>
         <br>
@@ -399,7 +389,7 @@
 
                     <div class="ach-date"> January 2026</div>
                 </li>
-                                <li class="achievement-item">
+                <li class="achievement-item">
                     <div class="ach-title">
                         Microsoft Elevate Power Bi 4 Weeks Internship
                         <span>MS-Elevate</span>
@@ -421,6 +411,7 @@
         <div class="partition"></div>
         <br>
 
+        <!-- ================= CONTACT ================= -->
 
         <section id="contact-me" class="contact reveal">
 
@@ -438,7 +429,9 @@
 
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
 
-                <button type="submit" class="msg">Send Message</button>
+                <button type="submit" class="msg">
+                    Send Message
+                </button>
 
             </form>
 
@@ -446,17 +439,14 @@
 
         </section>
 
-
-        <br>
-        <div class="partition"></div>
-        <br>
-
     </main>
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            Thanks for visiting <br>
+            Thanks for Visiting <br>
             Copyright © Subhasish ||
             All rights reserved ||
             Made with ❤️ ||
@@ -467,7 +457,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
 
