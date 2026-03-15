@@ -1,315 +1,255 @@
-// Loader
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* =========================
+  LOADER
+  ========================= */
+
   const loader = document.getElementById("global-loader");
-  if (loader) {
-    setTimeout(() => loader.classList.add("hidden"), 300);
+
+  window.showLoader = () => loader?.classList.remove("hidden");
+  window.hideLoader = () => loader?.classList.add("hidden");
+
+  window.addEventListener("load", () => {
+    setTimeout(() => loader?.classList.add("hidden"), 300);
+  });
+
+  /* =========================
+  TIMELINE SWITCH
+  ========================= */
+
+  window.showTimeline = function (tab, index) {
+
+    const timelines = document.querySelectorAll(".timeline");
+    const buttons = document.querySelectorAll(".tab-btn");
+    const underline = document.querySelector(".tab-underline");
+
+    timelines.forEach(t => t.style.display = "none");
+    buttons.forEach(b => b.classList.remove("active"));
+
+    document.getElementById(tab).style.display = "block";
+    buttons[index].classList.add("active");
+
+    underline.style.transform = `translateX(${index * 150}px)`;
+  };
+
+  /* =========================
+  TYPEWRITER TEXT
+  ========================= */
+
+  const words = ["Subhasish", "Developer", "Engineer"];
+  let index = 0;
+  const text = document.querySelector(".changing-text");
+
+  function changeText() {
+
+    if (!text) return;
+
+    text.style.opacity = 0;
+
+    setTimeout(() => {
+
+      text.textContent = words[index];
+      text.style.opacity = 1;
+
+      index = (index + 1) % words.length;
+
+    }, 400);
+
   }
-});
 
-window.showLoader = () => {
-  document.getElementById("global-loader")?.classList.remove("hidden");
-};
+  changeText();
+  setInterval(changeText, 2000);
 
-window.hideLoader = () => {
-  document.getElementById("global-loader")?.classList.add("hidden");
-};
+  /* =========================
+  SCROLL REVEAL
+  ========================= */
 
-function showTimeline(tab, index) {
+  const reveals = document.querySelectorAll(".reveal");
 
-  const timelines = document.querySelectorAll(".timeline");
-  const buttons = document.querySelectorAll(".tab-btn");
-  const underline = document.querySelector(".tab-underline");
+  function reveal() {
 
-  timelines.forEach(t => t.style.display = "none");
-  buttons.forEach(b => b.classList.remove("active"));
+    const windowHeight = window.innerHeight;
 
-  document.getElementById(tab).style.display = "block";
-  buttons[index].classList.add("active");
+    reveals.forEach(el => {
 
-  /* move underline */
+      const top = el.getBoundingClientRect().top;
 
-  underline.style.transform = `translateX(${index * 150}px)`;
+      if (top < windowHeight - 120) {
 
-}
-/* ===============================
-   LOADER TRIGGERS (CLICK ACTIONS)
-   =============================== */
+        el.classList.add("show");
 
-/* 1. Resume Download */
-document.querySelectorAll('a[download]').forEach(link => {
-  link.addEventListener('click', () => {
-    showLoader("Downloading resume...");
-    setTimeout(hideLoader, 1200);
-  });
-});
+      }
 
-/* 2. Projects: Live Demo & GitHub (dynamic content safe) */
-document.addEventListener("click", (e) => {
-  const link = e.target.closest("a");
-  if (!link) return;
+    });
 
-  if (link.classList.contains("live") || link.classList.contains("code")) {
-    showLoader("Opening project...");
-    setTimeout(hideLoader, 1200);
   }
-});
 
-/* 3. Achievements: Certificate View */
-document.querySelectorAll(".ach-view a img").forEach(link => {
-  link.addEventListener("click", () => {
-    showLoader("Opening certificate...");
-    setTimeout(hideLoader, 1200);
+  window.addEventListener("scroll", reveal);
+  reveal();
+
+  /* =========================
+  SCROLL TO TOP
+  ========================= */
+
+  const topBtn = document.getElementById("topBtn");
+
+  window.addEventListener("scroll", () => {
+
+    topBtn.style.display = window.scrollY > 200 ? "block" : "none";
+
   });
-});
 
-const words = ["Subhasish", "Developer", "Engineer"];
-let index = 0;
-const textElement = document.querySelector(".changing-text");
+  topBtn.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
 
-function changeText() {
-  textElement.style.opacity = 0;
-  textElement.style.transform = "translateY(-5px)";
+  /* =========================
+  DARK MODE
+  ========================= */
 
-  setTimeout(() => {
-    textElement.textContent = words[index];
-    textElement.style.opacity = 1;
-    textElement.style.transform = "translateY(0)";
-    index = (index + 1) % words.length;
-  }, 500);
-}
+  const darkToggle = document.getElementById("dark-toggle");
+  const mobileDarkToggle = document.getElementById("mobileDarkToggle");
 
-changeText();               // initial call
-setInterval(changeText, 2000);
-// Scroll Reveal Animation
-const revealElements = document.querySelectorAll(".reveal");
+  function toggleDark() {
 
-const revealOnScroll = () => {
-  const windowHeight = window.innerHeight;
-  const revealPoint = 120;
+    document.body.classList.toggle("dark-mode");
 
-  revealElements.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
+    const icon = document.body.classList.contains("dark-mode")
+      ? "/assets/light.svg"
+      : "/assets/dark.svg";
 
-    if (elementTop < windowHeight - revealPoint) {
-      el.classList.add("show");
-    }
-  });
-};
+    darkToggle.src = icon;
+    mobileDarkToggle.src = icon;
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+  }
 
-// Scroll to Top Button
-const btn = document.getElementById("topBtn");
-window.onscroll = () => {
-  btn.style.display = window.scrollY > 200 ? "block" : "none";
-}
-btn.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+  darkToggle?.addEventListener("click", toggleDark);
+  mobileDarkToggle?.addEventListener("click", toggleDark);
 
-// Dark Mode Toggle
-const darkToggle = document.getElementById('dark-toggle');
-const mobileDarkToggle = document.getElementById('mobileDarkToggle');
+  /* =========================
+  MOBILE MENU
+  ========================= */
 
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  const isDark = document.body.classList.contains('dark-mode');
-  const icon = isDark ? '/assets/light.svg' : '/assets/dark.svg';
-  darkToggle.src = icon;
-  mobileDarkToggle.src = icon;
-}
+  const hamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeMenu = document.getElementById("closeMenu");
 
-darkToggle.addEventListener('click', toggleDarkMode);
-mobileDarkToggle.addEventListener('click', toggleDarkMode);
+  hamburger.onclick = () => mobileMenu.classList.add("active");
+  closeMenu.onclick = () => mobileMenu.classList.remove("active");
 
-// Hamburger Menu
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-const closeMenu = document.getElementById('closeMenu');
+  /* =========================
+  LOAD PROJECTS
+  ========================= */
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.add('active');
-});
-closeMenu.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
-});
+  async function loadProjects() {
 
-async function loadProjectsAndInitSwiper() {
-  try {
-    const resp = await fetch('projects.json', { cache: "no-store" });
-    if (!resp.ok) throw new Error('Failed to load projects.json');
+    try {
 
-    const projects = await resp.json();
-    const wrapper = document.getElementById('projectsWrapper');
-    wrapper.innerHTML = '';
+      const resp = await fetch("projects.json");
+      const projects = await resp.json();
 
-    projects.forEach((p) => {
+      const wrapper = document.getElementById("projectsWrapper");
 
-      const techHTML = (p.tech || [])
-      .map(t => `<span class="tech-badge">${t}</span>`)
-      .join('');
+      if (!wrapper) return;
 
-      const slide = document.createElement('div');
-      slide.className = 'swiper-slide';
+      wrapper.innerHTML = "";
 
-      slide.innerHTML = `
+      projects.forEach(p => {
 
-<div class="project-card">
+        const card = document.createElement("div");
+        card.className = "project-card";
 
-  <div class="project-left reveal-left">
+        card.innerHTML = `
 
-      <img src="${p.image}" alt="${p.title}" class="project-preview">
+<div class="project-image">
 
-  </div>
+  <img src="${p.image}" alt="${p.title}">
 
-
-  <div class="project-right reveal-right">
-
-      <h2>${p.title}</h2>
-
-      <p class="project-desc">
-          <strong>Description:</strong> ${p.description}
-      </p>
-
-      <div class="tech-stack">
-          ${techHTML}
-      </div>
-
-      <div class="project-buttons">
-          <a class="live" href="${p.live}" target="_blank">Live Demo</a>
-          <a class="code" href="${p.github}" target="_blank">GitHub</a>
-      </div>
-
+  <div class="project-overlay">
+    <h3 class="project-title">${p.title}</h3>
+    <a class="view-project"
+       href="project.html?id=${encodeURIComponent(p.title)}">
+       View Project
+    </a>
   </div>
 
 </div>
 
 `;
 
-      wrapper.appendChild(slide);
-    });
+        wrapper.appendChild(card);
 
-    new Swiper('.projects-swiper', {
-      slidesPerView: 1,
-      spaceBetween: 24,
-      loop: false,
-      navigation: {
-        nextEl: '.next',
-        prevEl: '.prev',
-      },
-      pagination: {
-        el: '.projects-pagination',
-        clickable: true,
-      }
-    });
+      });
 
-  } catch (err) {
-    console.error('Projects load/init error:', err);
+    }
+
+    catch (err) {
+
+      console.error("Project load error:", err);
+
+    }
+
   }
-}
 
-document.addEventListener('DOMContentLoaded', function () {
-  if (typeof Swiper === 'undefined') {
-    console.error('Swiper not found. Did you include the Swiper script?');
-    return;
-  }
-  loadProjectsAndInitSwiper();
+  loadProjects();
+
+
+  /* =========================
+  EMAILJS CONTACT
+  ========================= */
+
+  // ✅ EMAILJS ONLY (No MongoDB)
+  (function () {
+    emailjs.init("3pApLSwcAD6Ba5Z_F"); // ✅ Your Public Key
+  })();
+
+  document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formStatus = document.getElementById("formStatus");
+    const submitBtn = this.querySelector("button[type='submit']");
+
+    const params = {
+      from_name: document.getElementById("name").value,
+      from_email: document.getElementById("email").value,
+      message: document.getElementById("message").value,
+    };
+
+    const serviceID = "service_9dsieua";
+    const templateID = "template_oxr2dvf";
+    const autoReplyTemplate = "template_31xex6k";
+
+    // ✅ SHOW LOADER IMMEDIATELY
+    showLoader("Sending message...");
+    submitBtn.disabled = true;
+
+    try {
+      // 1️⃣ Send message to YOU
+      await emailjs.send(serviceID, templateID, params);
+
+      // 2️⃣ Auto-reply to USER
+      await emailjs.send(serviceID, autoReplyTemplate, {
+        user_email: params.from_email,
+        user_name: params.from_name,
+      });
+
+      formStatus.textContent = "✅ Message Sent!";
+      formStatus.style.color = "green";
+      this.reset();
+
+    } catch (err) {
+      console.error(err);
+      formStatus.textContent = "❌ Failed to send message. Please try again.";
+      formStatus.style.color = "red";
+
+    } finally {
+      // ✅ HIDE LOADER ONLY AFTER RESULT IS SHOWN
+      setTimeout(() => {
+        hideLoader();
+        submitBtn.disabled = false;
+      }, 300);
+    }
+  });
+
 });
-
-// ✅ EMAILJS ONLY (No MongoDB)
-(function () {
-  emailjs.init("3pApLSwcAD6Ba5Z_F"); // ✅ Your Public Key
-})();
-
-document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const formStatus = document.getElementById("formStatus");
-  const submitBtn = this.querySelector("button[type='submit']");
-
-  const params = {
-    from_name: document.getElementById("name").value,
-    from_email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
-  };
-
-  const serviceID = "service_9dsieua";
-  const templateID = "template_oxr2dvf";
-  const autoReplyTemplate = "template_31xex6k";
-
-  // ✅ SHOW LOADER IMMEDIATELY
-  showLoader("Sending message...");
-  submitBtn.disabled = true;
-
-  try {
-    // 1️⃣ Send message to YOU
-    await emailjs.send(serviceID, templateID, params);
-
-    // 2️⃣ Auto-reply to USER
-    await emailjs.send(serviceID, autoReplyTemplate, {
-      user_email: params.from_email,
-      user_name: params.from_name,
-    });
-
-    formStatus.textContent = "✅ Message Sent!";
-    formStatus.style.color = "green";
-    this.reset();
-
-  } catch (err) {
-    console.error(err);
-    formStatus.textContent = "❌ Failed to send message. Please try again.";
-    formStatus.style.color = "red";
-
-  } finally {
-    // ✅ HIDE LOADER ONLY AFTER RESULT IS SHOWN
-    setTimeout(() => {
-      hideLoader();
-      submitBtn.disabled = false;
-    }, 300);
-  }
-});
-
-/* ===============================
-   SMART LOADER NAVIGATION HANDLER
-   =============================== */
-
-document.addEventListener("click", function (e) {
-  const link = e.target.closest("a");
-  if (!link) return;
-
-  const isDownload = link.hasAttribute("download");
-  const isProject =
-    link.classList.contains("live") ||
-    link.classList.contains("code");
-  const isCertificate = link.closest(".ach-view");
-
-  if (isDownload || isProject || isCertificate) {
-    e.preventDefault(); // ⛔ stop instant navigation
-
-    const href = link.href;
-    const target = link.target || "_self";
-
-    // show loader FIRST
-    showLoader(
-      isDownload
-        ? "Downloading resume..."
-        : isCertificate
-          ? "Opening certificate..."
-          : "Opening project..."
-    );
-
-    // open after loader is visible
-    setTimeout(() => {
-      if (target === "_blank") {
-        window.open(href, "_blank", "noopener");
-      } else {
-        window.location.href = href;
-      }
-      hideLoader();
-    }, 450); // ← perfect UX delay
-  }
-});
-
-
 
 
 
