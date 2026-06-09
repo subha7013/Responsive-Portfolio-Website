@@ -1,56 +1,96 @@
 [
-    {
-      "title": "Speed-Mart E-Commerce App",
-      "description": "SpeedMart is a fully functional, full-stack E-Commerce web application designed to provide users with a smooth online shopping experience. It features a modern, responsive frontend and a secure, scalable backend. Users can browse products, manage their cart, maintain a wishlist, and place orders — all with real-time updates and clean UI interaction.",
-      "image": "/assets/project1.png",
-      "live": "https://speedmart-order.netlify.app/",
-      "github": "https://github.com/subha7013/speedmart-frontend.git",
-      "tech": ["HTML", "CSS", "JavaScript","Mongodb","Node.js"]
-    },
-    {
-      "title": "Netflix Clone Website",
-      "description": "This project is a front-end replica of Netflix created using only HTML and CSS. It recreates the homepage layout, sections, and visual design of the original platform. The site is fully responsive, ensuring a smooth viewing experience across desktops, tablets, and mobile devices.",
-      "image": "/assets/project2.png",
-      "live": "https://clone-app713.netlify.app/",
-      "github": "https://github.com/subha7013/Netflix-Clone.git",
-      "tech": ["HTML", "CSS"]
-    },
-    {
-      "title": "Employee Salary Prediction",
-      "description": "This is a Machine learning project that predicts employee salary using regression models and a Streamlit demo.It is feeded by an dataset based on that it predicts salary as per given data.",
-      "image": "/assets/project3.jpg",
-      "live": "https://projectemployeesalaryprediction-ps9g74swdwnqjnppkjh3yx.streamlit.app/",
-      "github": "https://github.com/subha7013/Project_Employee_Salary_Prediction.git",
-      "tech": ["Python", "scikit-learn", "Streamlit"]
-    },
-    {
-      "title": "Weather App",
-      "description": "A simple Weather Application built with HTML, CSS, and python script using flask module that uses the OpenWeatherMap API to fetch and display live weather updates 🌍",
-      "image": "/assets/project4.png",
-      "live": "https://weather-app-mtsn.onrender.com/",
-      "github": "https://github.com/subha7013/Weather_App.git",
-      "tech": ["HTML", "CSS", "Python", "API"]
-    },
-        {
-      "title": "College Predictor Tool",
-      "description": "A web app that predicts engineering colleges and branches based on your exam rank and branch preference. Supports JEE Main, JEE Advanced, and WBJEE with category-priority predictions (ST → SC → OBC → General). Built with HTML, CSS, and JavaScript using a JSON-based dataset.",
-      "image": "/assets/project5.png",
-      "live": "https://college-pridictor-tool.netlify.app/",
-      "github": "https://github.com/subha7013/College-Predictor-Tool.git",
-      "tech": ["HTML", "CSS", "JS", "JSON"]
-    },
-    {
-  "title": "ChatSquare² - Real-Time Chat Application",
-  "description": "A real-time web chat application that enables private messaging between active users using WebSockets. Features include live user tracking, typing indicators, message timestamps, responsive design for mobile and desktop, and one-to-one chat by selecting online users. Built with Node.js, Express, and Socket.IO.",
-  "image": "/assets/project6.png",
-  "live": "https://chatsquaree.netlify.app/",
-  "github": "https://github.com/subha7013/ChatSquare.git",
-  "tech": ["HTML", "CSS", "JavaScript", "Node.js", "Express", "Socket.IO"]
-}
+  {
+    "title": "SmartAttend AI - Face recognition Attendance System",
+    "description": "A real-time AI-powered attendance management system that automatically marks attendance using facial recognition technology. Built a full-stack application with React, Node.js, MongoDB, and Python (FastAPI), featuring live analytics dashboards, department-wise attendance tracking, automated report generation (PDF/Excel), low-attendance email alerts, and secure role-based authentication.",
+    "image": "/assets/project7.jpg",
+    "live": "https://smartattendi.netlify.app/",
+    "github": "https://github.com/subha7013/SmartAttend-AI---Realtime-Face-Regognition-Attendance-System",
+    "tech": [
+      "React.JS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Python (FastAPI)",
+      "OpenCV",
+      "face_recognition ML model"
+    ]
+  }
+  {
+    "title": "Speed-Mart E-Commerce App",
+    "description": "SpeedMart is a fully functional, full-stack E-Commerce web application designed to provide users with a smooth online shopping experience. It features a modern, responsive frontend and a secure, scalable backend. Users can browse products, manage their cart, maintain a wishlist, and place orders — all with real-time updates and clean UI interaction.",
+    "image": "/assets/project1.png",
+    "live": "https://speedmart-order.netlify.app/",
+    "github": "https://github.com/subha7013/speedmart-frontend.git",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Mongodb",
+      "Node.js"
+    ]
+  },
+  {
+    "title": "Netflix Clone Website",
+    "description": "This project is a front-end replica of Netflix created using only HTML and CSS. It recreates the homepage layout, sections, and visual design of the original platform. The site is fully responsive, ensuring a smooth viewing experience across desktops, tablets, and mobile devices.",
+    "image": "/assets/project2.jpg",
+    "live": "https://clone-app713.netlify.app/",
+    "github": "https://github.com/subha7013/Netflix-Clone.git",
+    "tech": [
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "title": "Employee Salary Prediction",
+    "description": "This is a Machine learning project that predicts employee salary using regression models and a Streamlit demo.It is feeded by an dataset based on that it predicts salary as per given data.",
+    "image": "/assets/project3.jpg",
+    "live": "https://projectemployeesalaryprediction-ps9g74swdwnqjnppkjh3yx.streamlit.app/",
+    "github": "https://github.com/subha7013/Project_Employee_Salary_Prediction.git",
+    "tech": [
+      "Python",
+      "scikit-learn",
+      "Streamlit"
+    ]
+  },
+  {
+    "title": "Weather App",
+    "description": "A simple Weather Application built with HTML, CSS, and python script using flask module that uses the OpenWeatherMap API to fetch and display live weather updates 🌍",
+    "image": "/assets/project4.png",
+    "live": "https://weather-app-mtsn.onrender.com/",
+    "github": "https://github.com/subha7013/Weather_App.git",
+    "tech": [
+      "HTML",
+      "CSS",
+      "Python",
+      "API"
+    ]
+  },
+  {
+    "title": "College Predictor Tool",
+    "description": "A web app that predicts engineering colleges and branches based on your exam rank and branch preference. Supports JEE Main, JEE Advanced, and WBJEE with category-priority predictions (ST → SC → OBC → General). Built with HTML, CSS, and JavaScript using a JSON-based dataset.",
+    "image": "/assets/project5.png",
+    "live": "https://college-pridictor-tool.netlify.app/",
+    "github": "https://github.com/subha7013/College-Predictor-Tool.git",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JS",
+      "JSON"
+    ]
+  },
+  {
+    "title": "ChatSquare² - Real-Time Chat Application",
+    "description": "A real-time web chat application that enables private messaging between active users using WebSockets. Features include live user tracking, typing indicators, message timestamps, responsive design for mobile and desktop, and one-to-one chat by selecting online users. Built with Node.js, Express, and Socket.IO.",
+    "image": "/assets/project6.png",
+    "live": "https://chatsquaree.netlify.app/",
+    "github": "https://github.com/subha7013/ChatSquare.git",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "Socket.IO"
+    ]
+  }
 ]
-
-
-
-
-
-
