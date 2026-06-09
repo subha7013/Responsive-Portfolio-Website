@@ -123,6 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   darkToggle?.addEventListener("click", toggleDark);
   mobileDarkToggle?.addEventListener("click", toggleDark);
+  // Initialize dark mode on page load
+  if (!document.body.classList.contains("dark-mode")) {
+    toggleDark();
+  }
 
   /* =========================
   MOBILE MENU
