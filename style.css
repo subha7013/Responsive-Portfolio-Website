@@ -1311,6 +1311,7 @@ TIMELINE
 } */
 .timeline::before{
     display:none;
+  animation: growLine 1.5s ease;
 }
 
 .timeline-item{
