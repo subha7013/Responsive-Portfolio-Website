@@ -1329,6 +1329,7 @@ TIMELINE
     width:3px;
     height:calc(100% + 35px);
     background:linear-gradient(to bottom,#4c5fd5,#ff3d3d);
+  animation: growLine 1.5s ease;
 }
 
 .timeline-item:last-child::after{
