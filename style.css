@@ -1310,7 +1310,14 @@ TIMELINE
   align-items: flex-start;
 } */
 .timeline::before{
-    display:none;
+    content:"";
+    position:absolute;
+    left:10px;
+    top:14px;
+    bottom:43px;
+    width:3px;
+    background:linear-gradient(to bottom,#4c5fd5,#ff3d3d);
+    border-radius:50px;
 }
 
 .timeline-item{
