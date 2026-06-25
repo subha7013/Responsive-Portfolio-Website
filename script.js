@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById(tab).style.display = "block";
     buttons[index].classList.add("active");
 
-    underline.style.transform = `translateX(${index * 120}px)`;
+    underline.style.transform = `translateX(${index * 150}px)`;
   };
 
   /* =========================
