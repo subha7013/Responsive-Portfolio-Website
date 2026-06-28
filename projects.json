@@ -18,7 +18,7 @@
     {
     "title": "SEED AI Enabled Crop Health Predictor",
     "description": "A full‑stack AI‑driven web application that helps farmers detect crop diseases, pests, and weeds from uploaded images using YOLOv8 AI model. The system provides detection results, confidence scores, bounding boxes, treatment recommendations, and integrates real‑time weather data from OpenWeatherMap api.",
-    "image": "/assets/project8.jpg",
+    "image": "/assets/project8.png",
     "live": "Currently In development",
     "github": "https://github.com/subha7013/SEED-AI-Enabled-Crop-Health-Detector",
     "tech": [
