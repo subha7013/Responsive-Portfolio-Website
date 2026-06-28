@@ -15,6 +15,23 @@
       "face_recognition ML model"
     ]
   },
+    {
+    "title": "SEED AI Enabled Crop Health Predictor",
+    "description": "A full‑stack AI‑driven web application that helps farmers detect crop diseases, pests, and weeds from uploaded images using YOLOv8 AI model. The system provides detection results, confidence scores, bounding boxes, treatment recommendations, and integrates real‑time weather data from OpenWeatherMap api.
+",
+    "image": "/assets/project8.jpg",
+    "live": "Currently In development",
+    "github": "https://github.com/subha7013/SEED-AI-Enabled-Crop-Health-Detector",
+    "tech": [
+      "React.JS",
+      "Bootstrap",
+      "YOLOv8 (Ultralytics) AI Model",
+      "MongoDB",
+      "Python (FastAPI)",
+      "OpenCV",
+      "OpenWeatherMap Api"
+    ]
+  },
   {
     "title": "Speed-Mart E-Commerce App",
     "description": "SpeedMart is a fully functional, full-stack E-Commerce web application designed to provide users with a smooth online shopping experience. It features a modern, responsive frontend and a secure, scalable backend. Users can browse products, manage their cart, maintain a wishlist, and place orders — all with real-time updates and clean UI interaction.",
