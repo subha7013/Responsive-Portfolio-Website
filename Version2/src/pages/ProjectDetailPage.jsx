@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { projectsData } from '../data/portfolioData';
+import { projectsData, resolveUrl } from '../data/portfolioData';
 import { ExternalLink, Github, ArrowLeft, CheckCircle2, Code2 } from 'lucide-react';
 
 export const ProjectDetailPage = () => {
@@ -58,9 +58,13 @@ export const ProjectDetailPage = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md h-64 sm:h-80 rounded-2xl overflow-hidden border-2 border-indigo-500/30 shadow-2xl bg-slate-950">
               <img
-                src={project.image}
+                src={resolveUrl(project.image)}
                 alt={project.title}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = resolveUrl('/assets/sentinel.png');
+                }}
               />
             </div>
           </div>
