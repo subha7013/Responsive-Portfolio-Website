@@ -4,7 +4,10 @@ import { useTheme } from '../context/ThemeContext';
 import { Code, User, Award, FolderGit2, Phone, Layers } from 'lucide-react';
 
 const getAsset = (path) => {
-  const base = import.meta.env.BASE_URL || './';
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://')) return path;
+  let base = import.meta.env.BASE_URL || '/';
+  if (base === './') base = '/';
   const cleanBase = base.endsWith('/') ? base : `${base}/`;
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
   return `${cleanBase}${cleanPath}`;
