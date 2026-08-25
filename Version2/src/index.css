@@ -380,3 +380,20 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: #6366f1;
 }
+
+/* Custom Rotating Red-Blue Logo Loader */
+@keyframes snSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sn-rotating-border {
+  background: conic-gradient(from 0deg, #ef4444 0%, #f43f5e 25%, #3b82f6 50%, #2563eb 75%, #ef4444 100%);
+  animation: snSpin 1.2s linear infinite;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.45), 0 0 20px rgba(59, 130, 246, 0.45);
+}
+

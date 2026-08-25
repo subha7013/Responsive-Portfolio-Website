@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { Loader } from './components/Loader';
 
 import { ScrollProgress } from './components/ScrollProgress';
 
@@ -27,8 +28,20 @@ const ScrollToTop = () => {
 };
 
 export function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Show centered loader on initial website load, then fade out
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <ThemeProvider>
+      {isLoading && <Loader fullScreen={true} size="md" />}
       <div className="min-h-screen flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
         <ScrollProgress />
         <ScrollToTop />
@@ -53,3 +66,4 @@ export function App() {
 }
 
 export default App;
+
