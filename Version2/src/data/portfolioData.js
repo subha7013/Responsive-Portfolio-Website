@@ -10,7 +10,7 @@ export const personalInfo = {
   instagram: "https://www.instagram.com/s_ubha713",
   resumeUrl: "/certificates/resume.pdf",
   avatar: "/assets/profile.jpg",
-  picture: "/assets/profile.jpg"
+  picture: "profile.jpg"
 };
 
 export const skillsData = [
