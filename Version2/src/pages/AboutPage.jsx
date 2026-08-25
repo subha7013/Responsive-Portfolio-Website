@@ -6,23 +6,23 @@ import { NavLink } from 'react-router-dom';
 import { Code, Brain, Target, Github, Linkedin, Mail } from 'lucide-react';
 
 export const AboutPage = () => {
-  const principles = [
-    {
-      icon: <Brain className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />,
-      title: "AI-First Problem Solving",
-      desc: "Leveraging computer vision models (YOLOv8, OpenCV, face_recognition) to automate complex real-world workflows."
-    },
-    {
-      icon: <Code className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />,
-      title: "Full-Stack System Design",
-      desc: "Building clean, scalable end-to-end architectures using React, Node.js, Express, MongoDB, and Python microservices."
-    },
-    {
-      icon: <Target className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
-      title: "Performance & Reliability",
-      desc: "Writing modular, maintainable code focused on fast rendering, low latency API responses, and intuitive UX."
-    }
-  ];
+  // const principles = [
+  //   {
+  //     icon: <Brain className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />,
+  //     title: "AI-First Problem Solving",
+  //     desc: "Leveraging computer vision models (YOLOv8, OpenCV, face_recognition) to automate complex real-world workflows."
+  //   },
+  //   {
+  //     icon: <Code className="w-6 h-6 text-cyan-600 dark:text-cyan-400" />,
+  //     title: "Full-Stack System Design",
+  //     desc: "Building clean, scalable end-to-end architectures using React, Node.js, Express, MongoDB, and Python microservices."
+  //   },
+  //   {
+  //     icon: <Target className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />,
+  //     title: "Performance & Reliability",
+  //     desc: "Writing modular, maintainable code focused on fast rendering, low latency API responses, and intuitive UX."
+  //   }
+  // ];
 
   return (
     <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-16 sm:space-y-20 transition-colors duration-300">
@@ -126,7 +126,7 @@ export const AboutPage = () => {
       </div>
 
       {/* Engineering Principles */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {principles.map((p, idx) => (
           <ScrollReveal key={idx} delay={idx * 120}>
             <div className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-3 h-full">
@@ -138,7 +138,7 @@ export const AboutPage = () => {
             </div>
           </ScrollReveal>
         ))}
-      </div>
+      </div> */}
 
       {/* Switchable Education & Experience Timeline */}
       <ScrollReveal className="pt-8">
