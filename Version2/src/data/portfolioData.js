@@ -240,6 +240,16 @@ export const certificatesData = [
     description: "Specialized certification in full-stack project building, modern web standards, and intelligent system integration.",
     fileUrl: resolveUrl("/certificates/certificate - 2026-03-26T124635.175.pdf"),
     badge: ""
+  },
+  {
+    id: "appseai",
+    title: "Ai Automation Workflow management Workshop",
+    issuer: "AppseAI by AppseConnect",
+    date: "September 2026",
+    category: "Others",
+    description: "AI Automation and workflow management.",
+    fileUrl: resolveUrl("/certificates/appseai.png"),
+    badge: ""
   }
 ];
 
