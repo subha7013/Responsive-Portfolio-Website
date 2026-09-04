@@ -248,7 +248,7 @@ export const certificatesData = [
     date: "September 2026",
     category: "Others",
     description: "AI Automation and workflow management.",
-    fileUrl: resolveUrl("/certificates/appseai.png"),
+    fileUrl: resolveUrl("/certificates/appseai.pdf"),
     badge: ""
   }
 ];
