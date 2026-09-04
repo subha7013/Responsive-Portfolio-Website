@@ -242,7 +242,7 @@ export const certificatesData = [
     badge: ""
   },
   {
-    id: "appseai",
+    id: "appseai01",
     title: "Ai Automation Workflow management Workshop",
     issuer: "AppseAI by AppseConnect",
     date: "September 2026",
