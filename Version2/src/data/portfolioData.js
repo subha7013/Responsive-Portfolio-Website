@@ -132,22 +132,26 @@ export const projectsData = [
     ]
   },
   {
-    id: "speed-mart",
-    title: "Speed-Mart E-Commerce App",
-    shortDescription: "Full-stack E-Commerce platform with product browsing, wishlist management, and cart ordering.",
-    description: "SpeedMart is a fully functional, full-stack E-Commerce web application designed to provide users with a smooth online shopping experience. It features a modern, responsive frontend and a secure, scalable backend. Users can browse products, manage their cart, maintain a wishlist, and place orders with real-time UI updates.",
-    image: resolveUrl("/assets/project1.png"),
-    live: "https://speedmart-order.netlify.app/",
-    github: "https://github.com/subha7013/SpeedMart.git",
+    id: "quick-cart",
+    title: "QuickCart — 10-Minute E-Commerce Platform",
+    shortDescription: "Full-stack instant commerce platform with Razorpay checkout, live guest order tracking, smart coupons, and an admin CRM suite.",
+    description: "QuickCart is a production-grade, hyperlocal quick-commerce web application inspired by Blinkit and Zepto. Built with React 18, Node.js, Express, and MongoDB, it features sub-second catalog search, an interactive 5-stage live order tracker accessible to guests without login, Test mode - Razorpay multi-channel payments (UPI, Cards, Net Banking), a store credit wallet with admin cash airdrops, dynamic coupon validation with Minimum Order Value rules, printable GST tax invoices, and a comprehensive admin management dashboard with real-time store theme switching.",
+    image: resolveUrl("/assets/qc.png"), 
+    live: "https://orderquickcart.netlify.app/",
+    github: "https://github.com/subha7013/QuickCart-eCommerce-Showcase.git",
     category: "Full Stack",
     featured: true,
     tech: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "MongoDB",
+      "React 18",
+      "Vite",
       "Node.js",
-      "Express"
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "Razorpay API",
+      "JWT & Bcrypt",
+      "CSS3 Variables",
+      "RESTful API"
     ]
   },
   {
