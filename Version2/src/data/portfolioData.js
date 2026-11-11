@@ -136,7 +136,7 @@ export const projectsData = [
     title: "QuickCart — 10-Minute E-Commerce Platform",
     shortDescription: "Full-stack instant commerce platform with Razorpay checkout, live guest order tracking, smart coupons, and an admin CRM suite.",
     description: "QuickCart is a production-grade, hyperlocal quick-commerce web application inspired by Blinkit and Zepto. Built with React 18, Node.js, Express, and MongoDB, it features sub-second catalog search, an interactive 5-stage live order tracker accessible to guests without login, Test mode - Razorpay multi-channel payments (UPI, Cards, Net Banking), a store credit wallet with admin cash airdrops, dynamic coupon validation with Minimum Order Value rules, printable GST tax invoices, and a comprehensive admin management dashboard with real-time store theme switching.",
-    image: resolveUrl("/assets/qc.png"), 
+    image: resolveUrl("/assets/qc.png"),
     live: "https://orderquickcart.netlify.app/",
     github: "https://github.com/subha7013/QuickCart-eCommerce-Showcase.git",
     category: "Full Stack",
@@ -255,7 +255,7 @@ export const certificatesData = [
     fileUrl: resolveUrl("/certificates/appseai.pdf"),
     badge: ""
   },
-    {
+  {
     id: "cloud_security",
     title: " Cloud Security Monitoring System with Incident Management Assistance",
     issuer: "Infosys Springboard",
