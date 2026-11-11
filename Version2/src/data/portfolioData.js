@@ -254,6 +254,16 @@ export const certificatesData = [
     description: "AI Automation and workflow management.",
     fileUrl: resolveUrl("/certificates/appseai.pdf"),
     badge: ""
+  },
+    {
+    id: "cloud_security",
+    title: " Cloud Security Monitoring System with Incident Management Assistance",
+    issuer: "Infosys Springboard",
+    date: "October 2026",
+    category: "Internship",
+    description: "Completed a 3-month internship on Cloud Security Monitoring System with Incident Management Assistance, focusing on real-time security monitoring, threat detection, and incident response workflows.",
+    fileUrl: resolveUrl("/certificates/springboard_internship.pdf"),
+    badge: ""
   }
 ];
 
@@ -277,7 +287,7 @@ export const experienceData = [
   {
     role: "Java Tech Stack Intern",
     organization: "Infosys Springboard",
-    duration: "June 2026 - Present",
+    duration: "June 2026 - August 2026",
     project: "SentinelCore - Enterprise Security Platform",
     projectId: "Sentinel",
     projectLive: "https://sentinelcore-lyart.vercel.app/",
